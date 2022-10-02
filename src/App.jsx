@@ -1,14 +1,19 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
+
 import NavBar from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
+import BlogList from './pages/BlogList/BlogList'
+
 import * as authService from './services/authService'
+import * as blogService from './services/blogService'
 
 const App = () => {
+  const [blogs, setBlogs] = useState([])
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
 
@@ -22,11 +27,22 @@ const App = () => {
     setUser(authService.getUser())
   }
 
+  useEffect(() => {
+    const fetchAllBlogs = async () => {
+      const data = await blogService.getAllBlogs()
+      setBlogs(data)
+    }
+    fetchAllBlogs()
+  }, [])
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
         <Route path="/" element={<Landing user={user} />} />
+
+        <Route path="/blogs" element={<BlogList blogs={blogs} />} />
+        
         <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
