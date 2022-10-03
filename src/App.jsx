@@ -13,9 +13,9 @@ import * as authService from './services/authService'
 import * as blogService from './services/blogService'
 
 const App = () => {
+  const navigate = useNavigate()
   const [blogs, setBlogs] = useState([])
   const [user, setUser] = useState(authService.getUser())
-  const navigate = useNavigate()
 
   const handleLogout = () => {
     authService.logout()
@@ -42,7 +42,7 @@ const App = () => {
         <Route path="/" element={<Landing user={user} />} />
 
         <Route path="/blogs" element={<BlogList blogs={blogs} />} />
-        
+
         <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
