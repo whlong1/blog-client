@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import Icon from "../Icon/Icon"
 
 const BlogCard = ({ blog }) => {
   const isPlural = (arr, txt) => arr.length !== 1
@@ -10,6 +11,7 @@ const BlogCard = ({ blog }) => {
       <header>
         <h1>{blog.author.name}</h1>
         <h4>{isPlural(blog.author.blogs, 'Blog')}</h4>
+        <Icon category={blog.category} />
       </header>
       <p>{blog.text}</p>
       <footer>
