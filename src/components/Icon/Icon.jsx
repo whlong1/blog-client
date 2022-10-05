@@ -6,8 +6,15 @@ import Sports from '../../assets/icons/Sports.svg'
 import Televison from '../../assets/icons/Television.svg'
 
 const Icon = ({ category }) => {
-  
-  return <img src="" alt="" />
+  const icons = {
+    News: News,
+    Music: Music,
+    Games: Games,
+    Movies: Movies,
+    Sports: Sports,
+    Televison: Televison,
+  }
+  return <img src={icons[category]} alt="" />
 }
 
 export default Icon
