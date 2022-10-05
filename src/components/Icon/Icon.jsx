@@ -14,7 +14,7 @@ const Icon = ({ category }) => {
     Sports: Sports,
     Televison: Televison,
   }
-  return <img src={icons[category]} alt="" />
+  return <img src={icons[category]} alt={`A ${category} icon.`} />
 }
 
 export default Icon
