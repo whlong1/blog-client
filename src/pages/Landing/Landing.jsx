@@ -1,9 +1,10 @@
 import styles from './Landing.module.css'
+import Logotype from '../../assets/branding/logotype.svg'
 
-const Landing = ({ user }) => {
+const Landing = () => {
   return (
     <main className={styles.container}>
-      <h1>hello, {user ? user.name : 'friend'}</h1>
+      <img src={Logotype} alt="A cute owl." />
     </main>
   )
 }
