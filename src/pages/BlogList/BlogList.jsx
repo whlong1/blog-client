@@ -2,11 +2,11 @@ import BlogCard from "../../components/BlogCard/BlogCard"
 
 const BlogList = (props) => {
   return (
-    <div className="list">
+    <main className="list">
       {props.blogs.map((blog) => (
         <BlogCard key={blog._id} blog={blog} />
       ))}
-    </div>
+    </main>
   )
 }
 

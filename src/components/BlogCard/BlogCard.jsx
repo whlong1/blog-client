@@ -6,6 +6,7 @@ const BlogCard = ({ blog }) => {
     ? arr.length + ' ' + txt + 's'
     : arr.length + ' ' + txt
 
+  console.log(blog)
   return (
     <article className="card">
       <header>
