@@ -7,8 +7,8 @@ const NavBar = ({ user, handleLogout }) => {
   const publicLinks = () => {
     return (
       <ul>
-        <li><Link to="/login">Log In</Link></li>
-        <li><Link to="/signup">Sign Up</Link></li>
+        <li><Link to="/login">LOG IN</Link></li>
+        <li><Link to="/signup">SIGN UP</Link></li>
       </ul>
     )
   }
@@ -16,9 +16,8 @@ const NavBar = ({ user, handleLogout }) => {
   const protectedLinks = () => {
     return (
       <ul>
-        <li><Link to="/blogs">Blogs</Link></li>
-        <li><Link to="/profiles">Profiles</Link></li>
-        <li><Link to="/changePassword">Change Password</Link></li>
+        <li><Link to="/blogs">BLOGS</Link></li>
+        <li><Link to="/profiles">PROFILES</Link></li>
         <li><Link to="" onClick={handleLogout}>LOG OUT</Link></li>
       </ul>
     )
@@ -26,7 +25,7 @@ const NavBar = ({ user, handleLogout }) => {
 
   return (
     <nav className={styles.container}>
-      <img src={Logo} alt="A cute owl" />
+      <Link to={'/'}><img src={Logo} alt="A cute owl" /></Link>
       {user ? protectedLinks() : publicLinks()}
     </nav>
   )
