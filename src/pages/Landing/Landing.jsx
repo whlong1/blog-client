@@ -4,7 +4,7 @@ import Logotype from '../../assets/branding/logotype.svg'
 const Landing = () => {
   return (
     <main className={styles.container}>
-      <img src={Logotype} alt="A cute owl." />
+      <img src={Logotype} alt="A cute owl" />
     </main>
   )
 }

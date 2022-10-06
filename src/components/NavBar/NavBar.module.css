@@ -1,0 +1,19 @@
+.container {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.container img {
+  width: 50px;
+}
+
+.container ul {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-around;
+}

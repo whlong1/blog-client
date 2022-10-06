@@ -12,6 +12,13 @@ code {
     monospace;
 }
 
+a {
+  text-decoration: none;
+}
+
+
+
+
 .card img {
   width: 80px;
 }
