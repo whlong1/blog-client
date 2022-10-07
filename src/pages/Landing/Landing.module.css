@@ -14,7 +14,7 @@
   flex-direction: column;
 }
 
-.container img {
+.container section > img {
   width: 25%;
   min-width: 480px;
   margin-bottom: 80px;
@@ -31,8 +31,8 @@
 .testimonial header {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
 }
 
 .testimonial article {
@@ -50,14 +50,6 @@
   -webkit-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
 }
 
-.testimonial div {
-  width: 60px;
-  height: 60px;
-  margin-top: -50px;
-  border-radius: 50%;
-  background: black;
-}
-
 .testimonial footer {
   margin: 0;
   width: 100%;
@@ -72,6 +64,16 @@
   font-size: 14px;
   line-height: 22px;
   text-align: center;
+}
+
+.testimonial header img {
+  width: 90px;
+  height: 90px;
+  margin-top: -70px;
+  border-radius: 50%;
+  box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
+  -moz-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
+  -webkit-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
 }
 
 .testimonial header h3 {

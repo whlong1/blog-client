@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
   overflow-x: hidden;
   font-family: canada-type-gibson, sans-serif;

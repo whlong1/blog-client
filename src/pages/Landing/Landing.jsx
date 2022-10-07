@@ -1,6 +1,7 @@
 import styles from './Landing.module.css'
-import Logotype from '../../assets/branding/logotype.svg'
 import Stars from '../../assets/branding/stars.svg'
+import Logotype from '../../assets/branding/logotype.svg'
+import Profile from '../../assets/branding/profile.png'
 
 const Landing = () => {
   return (
@@ -18,7 +19,7 @@ const Landing = () => {
 
         <article>
           <header>
-            <div></div>
+            <img id={styles.prof} src={Profile} alt="A satisfied user" />
             <h3>Ben Manley</h3>
             <p>Software Engineer</p>
           </header>
