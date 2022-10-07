@@ -23,3 +23,68 @@
 .about {
   background-color: white;
 }
+
+.testimonial article * {
+  margin: 5px;
+}
+
+.testimonial header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.testimonial article {
+  display: flex;
+  margin: 5px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f2f5f7;
+  padding: 14px 28px 0px 28px;
+  border: 1px solid rgb(220, 220, 220);
+  box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
+  -moz-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
+  -webkit-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
+}
+
+.testimonial div {
+  width: 60px;
+  height: 60px;
+  margin-top: -50px;
+  border-radius: 50%;
+  background: black;
+}
+
+.testimonial footer {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 12px 0px 24px;
+  justify-content: center;
+}
+
+.testimonial article > p {
+  opacity: .5;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.testimonial header h3 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.testimonial header p {
+  margin: 0;
+  opacity: .55;
+  font-weight: 400;
+}
+
+.testimonial footer img {
+  height: 16px;
+}
