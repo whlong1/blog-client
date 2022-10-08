@@ -12,8 +12,21 @@ const Landing = () => {
       </section>
 
       <section className={styles.about}>
-        <h3>HOO ARE YOU?</h3>
-        <h1>ABOOT HOOT</h1>
+        <header>
+          <h3>WHO WE ARE</h3>
+          <h1>ABOUT US</h1>
+        </header>
+
+        <article>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur 
+            elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor adipiscing 
+            incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </article>
+
+
       </section>
 
       <section className={styles.testimonial}>
@@ -25,14 +38,11 @@ const Landing = () => {
 
         <article>
           <header>
-            <img id={styles.prof} src={Profile} alt="A satisfied user" />
             <h4>Ben Manley</h4>
             <p>Software Engineer</p>
           </header>
           <p>
-            As a night owl, I have a hard time finding blogging apps that fit my lifestyle. <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br />
-            incididunt ut labore et dolore magna aliqua.
+            As a night owl, I have a hard time finding blogging apps that fit my lifestyle. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <footer>
             <img src={Stars} alt="Four blue stars" />
