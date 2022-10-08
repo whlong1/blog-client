@@ -13,10 +13,13 @@ const Signup = props => {
 
   return (
     <main className={styles.container}>
-      <img src={SignupIcon} alt="An owl sitting on a sign" />
-      <h1>Sign Up</h1>
-      <p>{message}</p>
-      <SignupForm {...props} updateMessage={updateMessage} />
+      <section>
+        <img src={SignupIcon} alt="An owl sitting on a sign" />
+      </section>
+      <section>
+        <p>{message}</p>
+        <SignupForm {...props} updateMessage={updateMessage} />
+      </section>
     </main>
   )
 }
