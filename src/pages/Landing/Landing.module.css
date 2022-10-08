@@ -6,7 +6,7 @@
 }
 
 .container section {
-  padding: 0px 24px;
+  padding: 0px 22px;
 }
 
 .container > section {
@@ -19,7 +19,7 @@
 
 .container section > img {
   width: 25%;
-  min-width: 480px;
+  min-width: 460px;
   margin-bottom: 80px;
 }
 
@@ -138,4 +138,16 @@
 
 .testimonial footer img {
   height: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+  .about {
+    height: 460px !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about {
+    min-height: 700px;
+  }
 }
