@@ -1,36 +1,59 @@
 .container {
+  height: 92vh;
   display: flex;
+  overflow: hidden;
   align-items: center;
 }
 
 .container img {
-  width: 75%;
+  width: 65%;
+  max-width: 500px;
+}
+
+.container h1 {
+  font-weight: 600;
+  font-size: 28px;
+  margin: 7px 0px 21px 0px;
 }
 
 .container section {
   width: 50%;
-  height: 90vh;
+  height: 100%;
   display: flex;
+  padding: 21px;
   align-items: center;
   flex-direction: column;
   justify-content: center;
 }
 
+.container section:first-child {
+  background-color: #fdfeff;
+}
+
 .container form {
-  padding: 16px;
+  width: 100%;
   display: flex;
+  max-width: 500px;
   border-radius: 5px;
   flex-direction: column;
   background-color: white;
+  padding: 21px 21px 28px 21px;
   border: 1px solid rgb(220, 220, 220);
   box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
   -moz-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
   -webkit-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
 }
 
-.container input { 
+.container input {
+  margin: 7px 0px 14px 0px;
+}
+
+.container input, button { 
   width: 100%;
-  margin-bottom: 15px;
+  padding: 14px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid rgb(220, 220, 220);
 }
 
 .container div {
@@ -40,11 +63,28 @@
 }
 
 .container label {
-  margin: 5px 0px;
+  font-weight: 600;
+  margin: 7px 0px 14px 0px;
 }
 
 .container button {
-  width: 100%;
-  margin: 5px 0px;
+  color: white;
+  font-weight: 600;
+  background: #00a0df;
+  margin: 21px 0px 0px 0px;
 }
 
+.container a {
+  border: none;
+  font-size: 14px;
+  background: none;
+  font-weight: 500;
+  margin-top: 14px;
+  text-align: center;
+  color: rgb(200, 200, 200);
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #00a0df;
+}

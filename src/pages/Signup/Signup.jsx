@@ -3,7 +3,6 @@ import styles from './Signup.module.css'
 import SignupForm from '../../components/SignupForm/SignupForm'
 import SignupIcon from '../../assets/branding/signup.svg'
 
-
 const Signup = props => {
   const [message, setMessage] = useState([''])
 
