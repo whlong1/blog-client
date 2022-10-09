@@ -39,6 +39,9 @@
 .about {
   height: 50vh;
   background-color: white;
+  box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.15);
+  -moz-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.15);
+  -webkit-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.15);
 }
 
 .testimonial {
@@ -157,6 +160,7 @@
 
 .footer p {
   margin: 0;
+  font-size: 14px;
 }
 
 @media only screen and (max-width: 600px) {
