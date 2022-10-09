@@ -11,19 +11,13 @@ const Landing = () => {
         </section>
         <section className={styles.about}>
           <header>
-            <h3>WHO WE ARE</h3>
+            <h3>HOO WE ARE</h3>
             <h1>ABOUT US</h1>
           </header>
           <article>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
-              elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor adipiscing
-              incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
-              elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor adipiscing
-              incididunt ut labore et dolore magna.
+              Not everyone is a morning person. That's why we're building Hoot, an open and inclusive place for night owls to share their ideas, thoughts, and knowledge with one another. We provide a platform for people to share ideas in the early hours of the morning when owl brains work best.
+              Hoot is a community of self-identifying owls like you, that wants to make sure you always have something interesting to say no matter what time of day it is. You no longer have to worry about your troubles keeping you up during the day. You can now blog about your favorite topics and connect with other owls at night. With Hoot, it's never too late to post
             </p>
           </article>
         </section>

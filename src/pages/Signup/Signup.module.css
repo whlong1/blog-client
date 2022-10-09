@@ -26,9 +26,8 @@
 }
 
 .container section:first-child {
-  background-color: #fdfeff;
   justify-content: center;
-
+  background-color: #fdfeff;
 }
 
 .container form {
