@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 
-import NavBar from './components/NavBar/NavBar'
-import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
+import Signup from './pages/Signup/Signup'
 import Landing from './pages/Landing/Landing'
+import NavBar from './components/NavBar/NavBar'
 import Profiles from './pages/Profiles/Profiles'
-import ChangePassword from './pages/ChangePassword/ChangePassword'
 import BlogList from './pages/BlogList/BlogList'
+import ChangePassword from './pages/ChangePassword/ChangePassword'
 
 import * as authService from './services/authService'
 import * as blogService from './services/blogService'
