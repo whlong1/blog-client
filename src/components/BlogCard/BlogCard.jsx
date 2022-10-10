@@ -11,7 +11,7 @@ const BlogCard = ({ blog }) => {
       <p>{blog.text}</p>
       <footer>
         <Link to={`/blogs/${blog._id}`} state={blog}>
-          View Comments
+          View Details
         </Link>
       </footer>
     </article>

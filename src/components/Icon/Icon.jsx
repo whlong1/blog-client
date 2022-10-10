@@ -12,7 +12,7 @@ const Icon = ({ category }) => {
     Games: Games,
     Movies: Movies,
     Sports: Sports,
-    Televison: Televison,
+    Television: Televison,
   }
   return <img src={icons[category]} alt={`A ${category} icon.`} />
 }

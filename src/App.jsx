@@ -4,6 +4,7 @@ import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 import Login from './pages/Login/Login'
 import Signup from './pages/Signup/Signup'
 import Landing from './pages/Landing/Landing'
+import NewBlog from './pages/NewBlog/NewBlog'
 import NavBar from './components/NavBar/NavBar'
 import Profiles from './pages/Profiles/Profiles'
 import BlogList from './pages/BlogList/BlogList'
@@ -30,6 +31,7 @@ const App = () => {
 
   const handleAddBlog = async (blogData) => {
     const newBlog = await blogService.create(blogData)
+    newBlog.author = user
     setBlogs([newBlog, ...blogs])
     navigate('/blogs')
   }
@@ -48,8 +50,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Landing user={user} />} />
 
-
         <Route path="/blogs" element={<BlogList blogs={blogs} />} />
+        <Route path="/blogs/new" element={<NewBlog handleAddBlog={handleAddBlog} />} />
         <Route path="/blogs/:id" element={<BlogDetails blogs={blogs} />} />
 
         <Route
