@@ -21,7 +21,21 @@ async function create(blogData) {
   return await res.json()
 }
 
-export { 
+async function update(blogData) {
+  const res = await fetch(`${BASE_URL}/${blogData._id}`, {
+    method: 'PUT',
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(blogData)
+  })
+  return await res.json()
+}
+
+
+export {
   getAll,
   create,
+  update
 }

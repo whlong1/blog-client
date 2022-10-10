@@ -1,11 +1,11 @@
-import { useLocation } from "react-router-dom"
+import { useLocation, Link } from "react-router-dom"
 
 const BlogDetails = (props) => {
   const { state } = useLocation()
-  console.log(state)
   return (
     <main>
       {state.title}
+      <Link to='/blogs/edit' state={state}>Edit</Link>
     </main>
   )
 }
