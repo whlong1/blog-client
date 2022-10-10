@@ -28,6 +28,12 @@ const App = () => {
     setUser(authService.getUser())
   }
 
+  const handleAddBlog = async (blogData) => {
+    const newBlog = await blogService.create(blogData)
+    setBlogs([newBlog, ...blogs])
+    navigate('/blogs')
+  }
+
   useEffect(() => {
     const fetchAllBlogs = async () => {
       const data = await blogService.getAll()

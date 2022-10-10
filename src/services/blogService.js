@@ -9,14 +9,14 @@ async function getAll() {
   return await res.json()
 }
 
-async function create(blog) {
+async function create(blogData) {
   const res = await fetch(BASE_URL, {
     method: 'POST',
     headers: {
       'Authorization': `Bearer ${tokenService.getToken()}`,
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(blog)
+    body: JSON.stringify(blogData)
   })
   return await res.json()
 }
