@@ -115,15 +115,10 @@ input::file-selector-button {
   border: 1px solid rgb(220, 220, 220);
 }
 
-@media only screen and (max-height: 860px) {
-  .container section:nth-child(2) {
-    padding: 140px 21px 40px 21px;
-  }
-}
-
 @media only screen and (max-height: 768px) {
   .container section:nth-child(2) {
-    padding: 240px 21px 40px 21px;
+    border: 1px solid green;
+    justify-content: flex-start !important;
   }
 }
 
@@ -131,7 +126,6 @@ input::file-selector-button {
   .container section:nth-child(2) {
     height: 100vh;
     padding: 21px 21px 40px 21px;
-    justify-content: flex-start !important;
   }
 } 
 
@@ -143,6 +137,9 @@ input::file-selector-button {
   }
   .container section:first-child {
     display: none;
+  }
+  .container section:nth-child(2) {
+    justify-content: flex-start !important;
   }
   .container form {
     min-width: 100%;
@@ -181,6 +178,6 @@ input::file-selector-button {
 
 @media only screen and (max-width: 360px) {
   .container section {
-    margin-top: 335px;
+    margin-top: 325px;
   }
 }
