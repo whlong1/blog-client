@@ -7,6 +7,7 @@ import Landing from './pages/Landing/Landing'
 import NavBar from './components/NavBar/NavBar'
 import Profiles from './pages/Profiles/Profiles'
 import BlogList from './pages/BlogList/BlogList'
+import BlogDetails from './pages/BlogDetails/BlogDetails'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 
 import * as authService from './services/authService'
@@ -41,7 +42,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Landing user={user} />} />
 
+
         <Route path="/blogs" element={<BlogList blogs={blogs} />} />
+        <Route path="/blogs/:id" element={<BlogDetails blogs={blogs} />} />
 
         <Route
           path="/signup"

@@ -17,7 +17,7 @@ const Landing = () => {
           <article>
             <p>
               Not everyone is a morning person. That's why we're building Hoot, an open and inclusive place for night owls to share their ideas, thoughts, and knowledge with one another. We provide a platform for people to share ideas in the early hours of the morning when owl brains work best.
-              Hoot is a community of self-identifying owls like you, that wants to make sure you always have something interesting to say no matter what time of day it is. You no longer have to worry about your troubles keeping you up during the day. You can now blog about your favorite topics and connect with other owls at night. With Hoot, it's never too late to post
+              Hoot is a community of self-identifying owls like you, that wants to make sure you always have something interesting to say no matter what time of day it is. You no longer have to worry about your troubles keeping you up during the day. You can now blog about your favorite topics and connect with other owls at night. With Hoot, it's never too late to post.
             </p>
           </article>
         </section>

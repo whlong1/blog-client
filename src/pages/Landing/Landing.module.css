@@ -45,7 +45,7 @@
 }
 
 .testimonial {
-  height: 82vh;
+  height: 80vh;
 }
 
 .about header {
@@ -163,12 +163,18 @@
   font-size: 14px;
 }
 
+@media only screen and (max-width: 1200px) {
+  .testimonial {
+    height: 680px;
+  }
+} 
+
 @media only screen and (max-width: 1024px) {
   .about {
     height: 420px;
   }
   .testimonial {
-    height: 600px;
+    height: 580px;
   }
 } 
 
