@@ -88,3 +88,16 @@ input:focus {
   outline: none;
   border: 1px solid #00a0df;
 }
+
+@media only screen and (max-width: 912px) {
+  .container section {
+    width: 100vw;
+    justify-content: flex-start;
+  }
+  .container section:first-child {
+    display: none;
+  }
+  .container form {
+    min-width: 100%;
+  }
+} 
