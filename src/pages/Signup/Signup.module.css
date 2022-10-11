@@ -1,8 +1,10 @@
 .container {
-  height: 91vh;
+  height: 100%;
   display: flex;
   align-items: center;
 }
+
+.container p { margin: 0; }
 
 .container img {
   width: 65%;
@@ -10,8 +12,8 @@
 }
 
 .container h1 {
-  font-weight: 600;
   font-size: 28px;
+  font-weight: 600;
   margin: 7px 0px 21px 0px;
 }
 
@@ -25,15 +27,15 @@
 }
 
 .container section:first-child {
-  height: 100vh;
+  height: 100%;
+  align-items: center;
   justify-content: center;
   background-color: #fdfeff;
 }
 
 .container section:nth-child(2) {
   overflow: scroll;
-  justify-content: center;
-  padding: 21px 21px 40px 21px;
+  justify-content: flex-start;
 }
 
 .container form {
@@ -100,11 +102,6 @@ input[type="file"] {
   border: none;
 }
 
-input[type="file"]:focus {
-  border: initial;
-  outline: initial;
-}
-
 input::file-selector-button { 
   font-size: 14px;
   font-weight: 600;
@@ -115,68 +112,14 @@ input::file-selector-button {
   border: 1px solid rgb(220, 220, 220);
 }
 
-@media only screen and (max-height: 768px) {
-  .container section:nth-child(2) {
-    justify-content: flex-start !important;
-  }
-}
-
-@media only screen and (max-width: 1280px) {
-  .container section:nth-child(2) {
-    height: 100vh;
-    padding: 21px 21px 40px 21px;
-  }
-} 
-
 @media only screen and (max-width: 912px) {
   .container section {
-    width: 100vw;
-    margin-top: 70px;
-    min-height: 1000px;
+    width: 100%;
   }
   .container section:first-child {
     display: none;
   }
-  .container section:nth-child(2) {
-    justify-content: flex-start !important;
-  }
   .container form {
     min-width: 100%;
-  }
-} 
-
-@media only screen and (max-width: 820px) {
-  .container section {
-    margin-top: 70px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .container section {
-    margin-top: 70px;
-  }
-}
-
-@media only screen and (max-width: 540px) {
-  .container section {
-    margin-top: 345px;
-  }
-}
-
-@media only screen and (max-width: 414px) {
-  .container section {
-    margin-top: 150px;
-  }
-}
-
-@media only screen and (max-width: 375px) {
-  .container section {
-    margin-top: 360px;
-  }
-}
-
-@media only screen and (max-width: 360px) {
-  .container section {
-    margin-top: 325px;
   }
 }

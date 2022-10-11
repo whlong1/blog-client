@@ -16,8 +16,11 @@ const Signup = props => {
         <img src={SignupIcon} alt="An owl sitting on a sign" />
       </section>
       <section>
-        <p>{message}</p>
-        <SignupForm {...props} updateMessage={updateMessage} />
+        <SignupForm
+          {...props}
+          message={message}
+          updateMessage={updateMessage}
+        />
       </section>
     </main>
   )

@@ -1,9 +1,11 @@
 .container {
-  height: 91vh;
+  height: 100%;
   display: flex;
   overflow: hidden;
   align-items: center;
 }
+
+.container p { margin: 0; }
 
 .container img {
   width: 65%;
@@ -91,7 +93,7 @@ input:focus {
 
 @media only screen and (max-width: 912px) {
   .container section {
-    width: 100vw;
+    width: 100%;
     justify-content: flex-start;
   }
   .container section:first-child {

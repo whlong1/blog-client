@@ -33,6 +33,7 @@ const LoginForm = props => {
       className={styles.container}
     >
       <h1>Login</h1>
+      <p>{props.message}</p>
       <div>
         <label htmlFor="email" className={styles.label}>Email</label>
         <input
@@ -57,10 +58,7 @@ const LoginForm = props => {
       </div>
       <div>
         <button className={styles.button}>LOG IN</button>
-        <Link to="/">
-          CANCEL
-          {/* <button>CANCEL</button> */}
-          </Link>
+        <Link to="/">CANCEL</Link>
       </div>
     </form>
   )

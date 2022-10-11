@@ -16,8 +16,8 @@ const LoginPage = props => {
         <img src={LoginIcon} alt="An owl sitting on a sign" />
       </section>
       <section>
-        <p>{message}</p>
         <LoginForm
+          message={message}
           updateMessage={updateMessage}
           handleSignupOrLogin={props.handleSignupOrLogin}
         />

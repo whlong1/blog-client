@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import styles from './SignupForm.module.css'
 import * as authService from '../../services/authService'
 
-const SignupForm = props => {
+const SignupForm = (props) => {
   const navigate = useNavigate()
   const [formData, setFormData] = useState({
     name: '',
@@ -49,6 +49,7 @@ const SignupForm = props => {
       className={styles.container}
     >
       <h1>Sign Up</h1>
+      <p>{props.message}</p>
       <div className={styles.inputContainer}>
         <label htmlFor="name" className={styles.label}>Name</label>
         <input
