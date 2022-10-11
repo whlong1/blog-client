@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import styles from './BlogDetails.module.css'
 
 // Components
+import Icon from '../../components/Icon/Icon'
 import UserCard from "../../components/UserCard/UserCard"
 
 // Services
@@ -26,11 +27,14 @@ const BlogDetails = (props) => {
 
   return (
     <main className={styles.container}>
-      <header>
-        <h1>{blog.title}</h1>
-        <UserCard user={blog.author} />
-      </header>
-      <p>{blog.text}</p>
+      <article>
+        <header>
+          <Icon category={blog.category} />
+          <h1>{blog.title}</h1>
+          <UserCard user={blog.author} />
+        </header>
+        <p>{blog.text}</p>
+      </article>
     </main>
   )
 }
