@@ -65,7 +65,7 @@ const App = () => {
 
         <Route path="/blogs/edit" element={<EditBlog handleUpdateBlog={handleUpdateBlog} />} />
 
-        <Route path="/blogs/:id" element={<BlogDetails blogs={blogs} />} />
+        <Route path="/blogs/:id" element={<BlogDetails blogs={blogs} user={user} />} />
 
         <Route
           path="/signup"

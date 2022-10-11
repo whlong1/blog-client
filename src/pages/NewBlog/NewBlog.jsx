@@ -1,4 +1,5 @@
 import { useState } from "react"
+import styles from './NewBlog.module.css'
 
 const NewBlog = (props) => {
   const [form, setForm] = useState({
@@ -17,8 +18,9 @@ const NewBlog = (props) => {
   }
 
   return (
-    <main>
+    <main className={styles.container}>
       <form onSubmit={handleSubmit}>
+        <h1>New Blog</h1>
         <label htmlFor="title-input">Title</label>
         <input
           required
