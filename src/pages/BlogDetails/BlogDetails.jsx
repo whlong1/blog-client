@@ -2,6 +2,9 @@ import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import styles from './BlogDetails.module.css'
 
+// Components
+import UserCard from "../../components/UserCard/UserCard"
+
 // Services
 import * as blogService from '../../services/blogService'
 
@@ -25,7 +28,7 @@ const BlogDetails = (props) => {
     <main className={styles.container}>
       <header>
         <h1>{blog.title}</h1>
-        user card
+        <UserCard user={blog.author} />
       </header>
       <p>{blog.text}</p>
     </main>
