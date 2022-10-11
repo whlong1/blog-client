@@ -7,26 +7,6 @@
   flex-direction: column;
 }
 
-.container h1 {
-  font-size: 28px;
-  font-weight: 600;
-  margin: 7px 0px 21px 0px;
-}
-
-.container form {
-  width: 100%;
-  display: flex;
-  max-width: 500px;
-  border-radius: 5px;
-  flex-direction: column;
-  background-color: white;
-  padding: 21px 21px 28px 21px;
-  border: 1px solid rgb(220, 220, 220);
-  box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
-  -moz-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
-  -webkit-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
-}
-
 .container input, select, button { 
   width: 100%;
   padding: 14px;

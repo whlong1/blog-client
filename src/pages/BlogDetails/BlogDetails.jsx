@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
+import styles from './BlogDetails.module.css'
+
+// Services
 import * as blogService from '../../services/blogService'
 
 const BlogDetails = (props) => {
@@ -19,10 +22,10 @@ const BlogDetails = (props) => {
   if (!blog) return <h1>Loading</h1>
 
   return (
-    <main>
+    <main className={styles.container}>
       <header>
         <h1>{blog.title}</h1>
-        <h3>By {blog.author.name}</h3>
+        user card
       </header>
       <p>{blog.text}</p>
     </main>

@@ -3,10 +3,10 @@ import Icon from "../Icon/Icon"
 
 const BlogCard = ({ blog }) => {
   return (
-    <article className="card">
+    <article>
       <header>
         <h1>{blog.title}</h1>
-        <h1>{blog.author.name}</h1>
+        <h3>{blog.author.name}</h3>
         <Icon category={blog.category} />
       </header>
       <p>{blog.text}</p>

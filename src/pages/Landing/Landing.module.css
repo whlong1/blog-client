@@ -22,15 +22,6 @@
   margin-bottom: 80px;
 }
 
-.container article > p {
-  opacity: .4;
-  width: 100%;
-  font-size: 14px;
-  line-height: 22px;
-  text-align: justify;
-  text-align-last: center;
-}
-
 .splash {
   height: 91vh;
   justify-content: center;
@@ -142,6 +133,10 @@
   opacity: .4;
   font-size: 14px;
   font-weight: 400;
+}
+
+.testimonial article > p {
+  font-size: 14px;
 }
 
 .testimonial footer img {
