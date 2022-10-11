@@ -46,6 +46,13 @@ const App = () => {
     navigate('/blogs')
   }
 
+  const handleDeleteBlog = async (id) => {
+    console.log('Deleted Blog Id:', id)
+    const deletedBlog = await blogService.deleteBlog(id)
+    setBlogs(blogs.filter(b => b._id !== deletedBlog._id))
+    navigate('/blogs')
+  }
+
   useEffect(() => {
     const fetchAllBlogs = async () => {
       const data = await blogService.getAll()
@@ -65,7 +72,12 @@ const App = () => {
 
         <Route path="/blogs/edit" element={<EditBlog handleUpdateBlog={handleUpdateBlog} />} />
 
-        <Route path="/blogs/:id" element={<BlogDetails blogs={blogs} user={user} />} />
+        <Route
+          path="/blogs/:id"
+          element={
+            <BlogDetails user={user} handleDeleteBlog={handleDeleteBlog} />
+          }
+        />
 
         <Route
           path="/signup"

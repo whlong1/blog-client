@@ -33,9 +33,20 @@ async function update(blogData) {
   return await res.json()
 }
 
+async function deleteBlog(id) {
+  const res = await fetch(`${BASE_URL}/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`
+    }
+  })
+  return res.json()
+}
+
 
 export {
   getAll,
   create,
-  update
+  update,
+  deleteBlog
 }

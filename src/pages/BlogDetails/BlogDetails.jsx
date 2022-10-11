@@ -1,13 +1,15 @@
 import { useLocation, Link } from "react-router-dom"
 
-const BlogDetails = ({ user }) => {
+const BlogDetails = (props) => {
   const { state } = useLocation()
-  const isAuthor = user.profile === state.author._id
+  const isAuthor = props.user.profile === state.author._id
 
   const authorHeader = () => {
     return (
       <header>
-        <button>Delete</button>
+        <button onClick={()=> props.handleDeleteBlog(state._id)}>
+          Delete
+        </button>
         <Link to='/blogs/edit' state={state}>Edit</Link>
       </header>
     )
