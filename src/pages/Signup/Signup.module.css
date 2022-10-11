@@ -4,17 +4,17 @@
   align-items: center;
 }
 
-.container p { margin: 0; }
+.container h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 7px 0px 14px 0px;
+}
+
+.container p { margin: 0; padding: 0px 0 10px; }
 
 .container img {
   width: 65%;
   max-width: 500px;
-}
-
-.container h1 {
-  font-size: 28px;
-  font-weight: 600;
-  margin: 7px 0px 21px 0px;
 }
 
 .container section {

@@ -2,8 +2,15 @@ import * as tokenService from '../services/tokenService'
 
 const BASE_URL = `${process.env.REACT_APP_BACK_END_SERVER_URL}/api/blogs`
 
-async function getAll() {
+async function index() {
   const res = await fetch(BASE_URL, {
+    headers: { 'Authorization': `Bearer ${tokenService.getToken()}` },
+  })
+  return await res.json()
+}
+
+async function show(id) {
+  const res = await fetch(`${BASE_URL}/${id}`, {
     headers: { 'Authorization': `Bearer ${tokenService.getToken()}` },
   })
   return await res.json()
@@ -45,7 +52,8 @@ async function deleteBlog(id) {
 
 
 export {
-  getAll,
+  index,
+  show,
   create,
   update,
   deleteBlog
