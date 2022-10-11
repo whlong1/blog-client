@@ -32,7 +32,7 @@ const NewBlog = (props) => {
           onChange={handleChange}
         />
         <label htmlFor="text-input">Text</label>
-        <input
+        <textarea
           required
           type="text"
           name="text"

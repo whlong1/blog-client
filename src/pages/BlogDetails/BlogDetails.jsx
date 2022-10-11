@@ -12,6 +12,7 @@ import * as blogService from '../../services/blogService'
 const BlogDetails = (props) => {
   const { id } = useParams()
   const [blog, setBlog] = useState(null)
+  const date = new Date(blog?.createdAt).toDateString()
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -21,7 +22,7 @@ const BlogDetails = (props) => {
     fetchBlog()
   }, [id])
 
-  console.log(blog)
+  console.log(date)
 
   if (!blog) return <h1>Loading</h1>
 
@@ -30,8 +31,10 @@ const BlogDetails = (props) => {
       <article>
         <header>
           <Icon category={blog.category} />
+          <h4>MUSIC</h4>
           <h1>{blog.title}</h1>
           <UserCard user={blog.author} />
+          <h5>{date}</h5>
         </header>
         <p>{blog.text}</p>
       </article>

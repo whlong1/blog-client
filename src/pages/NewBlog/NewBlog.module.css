@@ -7,13 +7,15 @@
   flex-direction: column;
 }
 
-.container input, select, button { 
+.container input, textarea, select, button { 
   width: 100%;
   padding: 14px;
   font-size: 14px;
+  resize: vertical;
   border-radius: 5px;
   margin: 7px 0px 14px 0px;
   border: 1px solid rgb(220, 220, 220);
+  font-family: canada-type-gibson, sans-serif;
 }
 
 .container label {
