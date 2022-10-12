@@ -4,6 +4,7 @@ import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 // Components
 import Login from './pages/Login/Login'
 import Signup from './pages/Signup/Signup'
+import Logout from './pages/Logout/Logout'
 import Landing from './pages/Landing/Landing'
 import NewBlog from './pages/NewBlog/NewBlog'
 import NavBar from './components/NavBar/NavBar'
@@ -65,6 +66,7 @@ const App = () => {
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
+        <Route path="/logout" element={<Logout />} />
         <Route path="/" element={<Landing user={user} />} />
 
         <Route path="/blogs" element={<BlogList blogs={blogs} />} />

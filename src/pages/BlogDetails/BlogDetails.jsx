@@ -34,7 +34,10 @@ const BlogDetails = (props) => {
           <h4>MUSIC</h4>
           <h1>{blog.title}</h1>
           <UserCard user={blog.author} />
-          <h5>{date}</h5>
+          <div>
+            <Icon category="Calendar" />
+            <h5>{date}</h5>
+          </div>
         </header>
         <p>{blog.text}</p>
       </article>
