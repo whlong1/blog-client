@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom"
 import styles from './BlogDetails.module.css'
 
 // Components
-import Icon from '../../components/Icon/Icon'
+import DateCard from "../../components/DateCard/DateCard"
 import UserCard from "../../components/UserCard/UserCard"
 
 // Services
@@ -12,7 +12,6 @@ import * as blogService from '../../services/blogService'
 const BlogDetails = (props) => {
   const { id } = useParams()
   const [blog, setBlog] = useState(null)
-  const date = new Date(blog?.createdAt).toDateString()
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -22,22 +21,16 @@ const BlogDetails = (props) => {
     fetchBlog()
   }, [id])
 
-  console.log(date)
-
   if (!blog) return <h1>Loading</h1>
 
   return (
     <main className={styles.container}>
       <article>
         <header>
-          {/* <Icon category={blog.category} /> */}
           <h3>MUSIC</h3>
           <h1>{blog.title}</h1>
           <UserCard user={blog.author} />
-          <div>
-            <Icon category="Calendar" />
-            <h5>{date}</h5>
-          </div>
+          <DateCard createdAt={blog.createdAt} />
         </header>
         <p>{blog.text}</p>
       </article>
