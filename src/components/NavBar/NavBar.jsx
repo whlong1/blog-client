@@ -16,6 +16,7 @@ const NavBar = ({ user, handleLogout }) => {
   const protectedLinks = () => {
     return (
       <ul>
+
         <li><Link to="/blogs">BLOGS</Link></li>
         <li><Link to="/blogs/new">NEW BLOG</Link></li>
         <li><Link to="/profiles">PROFILES</Link></li>
