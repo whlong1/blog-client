@@ -30,8 +30,8 @@ const BlogDetails = (props) => {
     <main className={styles.container}>
       <article>
         <header>
-          <Icon category={blog.category} />
-          <h4>MUSIC</h4>
+          {/* <Icon category={blog.category} /> */}
+          <h3>MUSIC</h3>
           <h1>{blog.title}</h1>
           <UserCard user={blog.author} />
           <div>

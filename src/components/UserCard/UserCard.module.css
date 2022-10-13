@@ -7,6 +7,12 @@
   margin: 5px;
 }
 
+.container h3 {
+  margin: 5px;
+  color: black;
+  font-weight: 500;
+}
+
 .container img {
   width: 30px;
   border-radius: 50%;
