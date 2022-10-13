@@ -4,8 +4,7 @@ import styles from './BlogDetails.module.css'
 
 // Components
 import Loading from "../Loading/Loading"
-import DateCard from "../../components/DateCard/DateCard"
-import UserCard from "../../components/UserCard/UserCard"
+import BlogHeader from "../../components/BlogHeader/BlogHeader"
 
 // Services
 import * as blogService from '../../services/blogService'
@@ -27,12 +26,7 @@ const BlogDetails = (props) => {
   return (
     <main className={styles.container}>
       <article>
-        <header>
-          <h3>MUSIC</h3>
-          <h1>{blog.title}</h1>
-          <UserCard user={blog.author} />
-          <DateCard createdAt={blog.createdAt} />
-        </header>
+        <BlogHeader blog={blog} />
         <p>{blog.text}</p>
       </article>
     </main>

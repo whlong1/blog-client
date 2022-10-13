@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.container h3 {
+  color: #00a0df;
+}
+
+.authorship {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.authorship * {
+  margin: 0;
+}
+
+.authorship > img {
+  width: 35px;
+}
+
+.authorship section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .container article header div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+} */
+
+/* .container p {
+  text-indent: 21px;
+  text-align-last: left;
+}
+
+.container h4 {
+  color: #00a0df;
+} */
+
+/* .container h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #00a0df;
+  margin-bottom: 0;
+} */
