@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import styles from './BlogDetails.module.css'
 
 // Components
+import Loading from "../Loading/Loading"
 import DateCard from "../../components/DateCard/DateCard"
 import UserCard from "../../components/UserCard/UserCard"
 
@@ -21,7 +22,7 @@ const BlogDetails = (props) => {
     fetchBlog()
   }, [id])
 
-  if (!blog) return <h1>Loading</h1>
+  if (!blog) return <Loading />
 
   return (
     <main className={styles.container}>
