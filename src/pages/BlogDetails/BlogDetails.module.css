@@ -13,14 +13,31 @@
   max-width: 700px;
   flex-direction: column;
   padding: 21px 21px 42px 21px;
-  
-  /* border-radius: 5px; */
-  /* background-color: white;
-  border-left: 1px solid rgb(220, 220, 220);
-  border-right: 1px solid rgb(220, 220, 220); */
 }
 
 .container p {
   text-indent: 21px;
   text-align-last: left;
+}
+
+.container header {
+  display: flex;
+  margin-bottom: 21px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.container header * {
+  margin: 0
+}
+
+.container h1 {
+  margin-bottom: 21px;
+}
+
+.container h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #00a0df;
+  margin-bottom: 10px;
 }

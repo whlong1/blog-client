@@ -4,7 +4,7 @@ import styles from './BlogDetails.module.css'
 
 // Components
 import Loading from "../Loading/Loading"
-import BlogHeader from "../../components/BlogHeader/BlogHeader"
+import AuthorTab from "../../components/AuthorTab/AuthorTab"
 
 // Services
 import * as blogService from '../../services/blogService'
@@ -26,7 +26,11 @@ const BlogDetails = (props) => {
   return (
     <main className={styles.container}>
       <article>
-        <BlogHeader blog={blog} />
+        <header className={styles.container}>
+          <h3>MUSIC</h3>
+          <h1>{blog.title}</h1>
+          <AuthorTab content={blog} />
+        </header>
         <p>{blog.text}</p>
       </article>
     </main>
