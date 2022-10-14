@@ -14,6 +14,11 @@
   margin-bottom: 14px;
 }
 
+.container img {
+  width: 30px;
+  color: #00a0df;
+}
+
 .container h1 {
   font-size: 18px;
   overflow: hidden;
@@ -31,6 +36,7 @@
   line-height: 1.5rem;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  text-align-last: left;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
 }
