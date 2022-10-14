@@ -13,6 +13,7 @@ import BlogList from './pages/BlogList/BlogList'
 import EditBlog from './pages/EditBlog/EditBlog'
 import BlogDetails from './pages/BlogDetails/BlogDetails'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
 // Services
 import * as authService from './services/authService'
@@ -65,42 +66,47 @@ const App = () => {
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
-        <Route path="/logout" element={<Logout />} />
         <Route path="/" element={<Landing user={user} />} />
-        <Route path="/blogs" element={<BlogList blogs={blogs} />} />
-        <Route path="/blogs/new" element={<NewBlog handleAddBlog={handleAddBlog} />} />
+        <Route path="/logout" element={<Logout />} />
+        <Route path="/login" element={<Login handleSignupOrLogin={handleSignupOrLogin} />} />
+        <Route path="/signup" element={<Signup handleSignupOrLogin={handleSignupOrLogin} />} />
 
-        <Route path="/blogs/edit" element={<EditBlog handleUpdateBlog={handleUpdateBlog} />} />
+        <Route path="/blogs" element={
+          <ProtectedRoute user={user}>
+            <BlogList blogs={blogs} />
+          </ProtectedRoute>
+        } />
 
-        <Route
-          path="/blogs/:id"
-          element={
+        <Route path="/blogs/new" element={
+          <ProtectedRoute user={user}>
+            <NewBlog handleAddBlog={handleAddBlog} />
+          </ProtectedRoute>
+        } />
+
+        <Route path="/blogs/edit" element={
+          <ProtectedRoute user={user}>
+            <EditBlog handleUpdateBlog={handleUpdateBlog} />
+          </ProtectedRoute>
+        } />
+
+        <Route path="/blogs/:id" element={
+          <ProtectedRoute user={user}>
             <BlogDetails user={user} handleDeleteBlog={handleDeleteBlog} />
-          }
-        />
+          </ProtectedRoute>
+        } />
 
-        <Route
-          path="/signup"
-          element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
-        />
-        <Route
-          path="/login"
-          element={<Login handleSignupOrLogin={handleSignupOrLogin} />}
-        />
-        <Route
-          path="/profiles"
-          element={user ? <Profiles /> : <Navigate to="/login" />}
-        />
-        <Route
-          path="/changePassword"
-          element={
-            user ? (
-              <ChangePassword handleSignupOrLogin={handleSignupOrLogin} />
-            ) : (
-              <Navigate to="/login" />
-            )
-          }
-        />
+        <Route path="/profiles" element={
+          <ProtectedRoute user={user}>
+            <Profiles />
+          </ProtectedRoute>
+        } />
+        
+        <Route path="/changePassword" element={
+          <ProtectedRoute user={user}>
+            <ChangePassword handleSignupOrLogin={handleSignupOrLogin} />
+          </ProtectedRoute>
+        } />
+
       </Routes>
     </>
   )
