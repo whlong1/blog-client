@@ -1,7 +1,7 @@
 .container {
   width: 100%;
   height: 220px;
-  padding: 21px;
+  padding: 14px 21px;
   border-radius: 5px;
   background-color: white;
   border: 1px solid rgb(220, 220, 220);
@@ -14,13 +14,26 @@
   margin-bottom: 14px;
 }
 
-.container img {
-  width: 30px;
+.container span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 7px 0px 14px 0px;
+}
+
+.container span img {
+  margin: 0;
+  width: 35px;
+  opacity: .8;
+  padding: 3px;
   color: #00a0df;
+  border-radius: 50%;
+  border: 1px solid rgb(220, 220, 220);
 }
 
 .container h1 {
-  font-size: 18px;
+  margin: 0;
+  font-size: 19px;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 1;
