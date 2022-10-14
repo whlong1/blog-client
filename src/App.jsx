@@ -67,7 +67,6 @@ const App = () => {
       <Routes>
         <Route path="/logout" element={<Logout />} />
         <Route path="/" element={<Landing user={user} />} />
-
         <Route path="/blogs" element={<BlogList blogs={blogs} />} />
         <Route path="/blogs/new" element={<NewBlog handleAddBlog={handleAddBlog} />} />
 
