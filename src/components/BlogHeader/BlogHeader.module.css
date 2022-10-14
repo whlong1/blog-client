@@ -17,19 +17,3 @@
   color: #00a0df;
   margin-bottom: 10px;
 }
-
-.authorship {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.authorship > img {
-  width: 32px;
-  margin-right: 12px;
-}
-
-.authorship section {
-  display: flex;
-  flex-direction: column;
-}

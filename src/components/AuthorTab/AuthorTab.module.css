@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container > img {
+  width: 32px;
+  margin-right: 12px;
+}
+
+.container section {
+  display: flex;
+  flex-direction: column;
+}
