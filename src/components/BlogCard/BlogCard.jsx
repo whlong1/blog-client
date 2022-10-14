@@ -10,7 +10,7 @@ const BlogCard = ({ blog }) => {
     <Link to={`/blogs/${blog._id}`}>
       <article className={styles.container}>
         <header>
-          <Icon category={blog.category} />
+          {/* <Icon category={blog.category} /> */}
           <h1>{blog.title}</h1>
           <AuthorTab content={blog} />
         </header>

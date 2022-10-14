@@ -6,7 +6,7 @@ async function getAllProfiles() {
   const res = await fetch(BASE_URL, {
     headers: { 'Authorization': `Bearer ${tokenService.getToken()}` },
   })
-  return await res.json()
+  return res.json()
 }
 
 async function addPhoto(photoData, profileId) {
