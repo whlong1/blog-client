@@ -1,24 +1,23 @@
 .container {
   height: 100%;
-  padding: 21px;
   display: flex;
   overflow: scroll;
   align-items: center;
   flex-direction: column;
+  background-color: white;
 }
 
 .container article {
   width: 100%;
   display: flex;
-  max-width: 750px;
-  border-radius: 5px;
+  max-width: 700px;
   flex-direction: column;
-  background-color: white;
   padding: 21px 21px 42px 21px;
-  border: 1px solid rgb(220, 220, 220);
-  box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
-  -moz-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
-  -webkit-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
+  
+  /* border-radius: 5px; */
+  /* background-color: white;
+  border-left: 1px solid rgb(220, 220, 220);
+  border-right: 1px solid rgb(220, 220, 220); */
 }
 
 .container p {
