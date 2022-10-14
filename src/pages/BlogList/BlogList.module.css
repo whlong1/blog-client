@@ -1,11 +1,25 @@
 .container {
+  gap: 14px;
+  width: 100%;
+  display: grid;
   padding: 21px;
-  display: flex;
-  justify-content: center;
-  
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(1, 1fr);
+}
 
-  /* flex-flow: column wrap */
+@media only screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .container {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
