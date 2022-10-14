@@ -1,16 +1,11 @@
 .container {
+  opacity: .35;
   display: flex;
   align-items: center;
 }
 
-.container * {
-  margin: 0;
-  opacity: .35;
-  font-size: 12px;
-  font-weight: 500;
-}
-
 .container img {
-  width: 18px;
-  margin-right: 3px;
+  width: 17px;
+  margin-right: 2px;
+  margin-left: -2px;
 }
