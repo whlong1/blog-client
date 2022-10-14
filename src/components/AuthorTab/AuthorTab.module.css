@@ -13,6 +13,10 @@
   margin-right: 12px;
 }
 
+.container h4 {
+  opacity: .75;
+}
+
 .container section {
   display: flex;
   flex-direction: column;
