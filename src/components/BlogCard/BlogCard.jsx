@@ -9,15 +9,15 @@ const BlogCard = ({ blog }) => {
   return (
     <article className={styles.container}>
       <header>
+        <Icon category={blog.category} />
         <h1>{blog.title}</h1>
         <AuthorTab content={blog} />
-        {/* <Icon category={blog.category} /> */}
       </header>
-      {/* <p>{blog.text}</p> */}
+      <p>{blog.text}</p>
       <footer>
-        <Link to={`/blogs/${blog._id}`} state={blog}>
+        {/* <Link to={`/blogs/${blog._id}`} state={blog}>
           View Details
-        </Link>
+        </Link> */}
       </footer>
     </article>
   )
