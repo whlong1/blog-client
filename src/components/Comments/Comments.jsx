@@ -1,8 +1,17 @@
-const Comments = () => {
+// import styles from './Comments.module.css'
+import CommentCard from '../CommentCard/CommentCard'
+
+
+const Comments = ({ comments }) => {
+
+  if (!comments) return <h4>No Comments</h4>
+
   return (
-    <section>
-      Comment Section
-    </section>
+    <>
+      {comments.map((comment) => (
+        <CommentCard key={comment._id} comment={comment} />
+      ))}
+    </>
   )
 }
 

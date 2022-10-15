@@ -50,11 +50,23 @@ async function deleteBlog(id) {
   return res.json()
 }
 
+async function createComment(id, commentData) {
+  const res = await fetch(`${BASE_URL}/${id}/comments`, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(commentData)
+  })
+  return res.json()
+}
 
 export {
   index,
   show,
   create,
   update,
-  deleteBlog
+  deleteBlog,
+  createComment
 }

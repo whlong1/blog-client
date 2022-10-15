@@ -4,7 +4,9 @@ import styles from './BlogDetails.module.css'
 
 // Components
 import Loading from "../Loading/Loading"
+import Comments from "../../components/Comments/Comments"
 import AuthorTab from "../../components/AuthorTab/AuthorTab"
+import NewComment from "../../components/NewComment/NewComment"
 
 // Services
 import * as blogService from '../../services/blogService'
@@ -21,6 +23,12 @@ const BlogDetails = (props) => {
     fetchBlog()
   }, [id])
 
+  const handleAddComment = async (commentData) => {
+    const newComment = await blogService.createComment(id, commentData)
+    newComment.author = props.user
+    setBlog({...blog, comments: [...blog.comments, newComment]})
+  }
+
   if (!blog) return <Loading />
 
   return (
@@ -33,6 +41,11 @@ const BlogDetails = (props) => {
         </header>
         <p>{blog.text}</p>
       </article>
+      <section>
+        <header><h1>Comments</h1></header>
+        <NewComment handleAddComment={handleAddComment} />
+        <Comments comments={blog.comments} />
+      </section>
     </main>
   )
 }
