@@ -40,6 +40,7 @@ const BlogDetails = (props) => {
           <span>
             <AuthorTab content={blog} />
             <Link to={`/blogs/${id}/edit`} state={blog}>Edit</Link>
+            <button onClick={() => props.handleDeleteBlog(id)}>Delete</button>
           </span>
         </header>
         <p>{blog.text}</p>
