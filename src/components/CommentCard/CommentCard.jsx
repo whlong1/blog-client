@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import AuthorInfo from "../AuthorInfo/AuthorInfo"
 
 const CommentCard = ({ comment, user }) => {

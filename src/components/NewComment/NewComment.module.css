@@ -1,6 +1,11 @@
 .container {
   padding: 21px;
   max-width: 100%;
+  
+  /* border: none; */
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
 }
 
 .container span {

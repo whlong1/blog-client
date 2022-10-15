@@ -20,7 +20,9 @@ const NewComment = ({ handleAddComment }) => {
     <form className={styles.container} onSubmit={handleSubmit}>
       <span>
         <h3>New Comment</h3>
-        <button type="button" onClick={() => setVisible(!visible)}>+</button>
+        <button type="button" onClick={() => setVisible(!visible)}>
+          {visible ? "-" : "+"}
+        </button>
       </span>
       {visible &&
         <>
