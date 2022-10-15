@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useLocation } from "react-router-dom"
+import styles from './EditBlog.module.css'
 
 const EditBlog = (props) => {
   const { state } = useLocation()
@@ -16,8 +17,9 @@ const EditBlog = (props) => {
   }
 
   return (
-    <main>
+    <main className={styles.container}>
       <form onSubmit={handleSubmit}>
+        <h1>Edit Blog</h1>
         <label htmlFor="title-input">Title</label>
         <input
           required
