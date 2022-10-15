@@ -67,9 +67,8 @@
   cursor: pointer;
 }
 
-.container > section form {
-  max-width: 100%;
-  border: 1px solid red;
+.container > section header {
+  margin-bottom: 0px;
 }
 
 .container > section article {

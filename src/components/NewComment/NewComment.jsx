@@ -1,4 +1,5 @@
 import { useState } from "react"
+import styles from './NewComment.module.css'
 
 const NewComment = ({ handleAddComment }) => {
   const [form, setForm] = useState({ text: '' })
@@ -10,13 +11,13 @@ const NewComment = ({ handleAddComment }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     handleAddComment(form)
+    setForm({ text: '' })
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h1>New Comment</h1>
-      <label htmlFor="title-input">Text</label>
-      <input
+    <form className={styles.container} onSubmit={handleSubmit}>
+      <h3>New Comment</h3>
+      <textarea
         required
         type="text"
         name="text"

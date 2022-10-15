@@ -1,0 +1,24 @@
+.container {
+  max-width: 100%;
+}
+
+.container h3 {
+  color: black;
+}
+
+.container input, textarea, select, button { 
+  width: 100%;
+  padding: 14px;
+  font-size: 14px;
+  resize: vertical;
+  border-radius: 5px;
+  margin: 7px 0px 14px 0px;
+  border: 1px solid rgb(220, 220, 220);
+}
+
+.container button {
+  margin: 0;
+  color: white;
+  font-weight: 600;
+  background: #00a0df;
+}
