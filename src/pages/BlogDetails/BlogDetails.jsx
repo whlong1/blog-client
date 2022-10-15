@@ -5,7 +5,7 @@ import styles from './BlogDetails.module.css'
 // Components
 import Loading from "../Loading/Loading"
 import Comments from "../../components/Comments/Comments"
-import AuthorTab from "../../components/AuthorTab/AuthorTab"
+import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
 import NewComment from "../../components/NewComment/NewComment"
 
 // Services
@@ -38,7 +38,7 @@ const BlogDetails = (props) => {
           <h3>MUSIC</h3>
           <h1>{blog.title}</h1>
           <span>
-            <AuthorTab content={blog} />
+            <AuthorInfo content={blog} />
             {blog.author._id === props.user.profile &&
               <>
                 <Link to={`/blogs/${id}/edit`} state={blog}>Edit</Link>

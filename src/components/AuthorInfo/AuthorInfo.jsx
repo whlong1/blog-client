@@ -1,8 +1,8 @@
-import styles from './AuthorTab.module.css'
+import styles from './AuthorInfo.module.css'
 import ProfileIcon from '../../assets/icons/profile.png'
-import DateCard from "../../components/DateCard/DateCard"
+import DateCard from "../DateCard/DateCard"
 
-const AuthorTab = ({ content }) => {
+const AuthorInfo = ({ content }) => {
   const avatar = content.author.avatar ? content.author.avatar : ProfileIcon
   return (
     <div className={styles.container}>
@@ -15,4 +15,4 @@ const AuthorTab = ({ content }) => {
   )
 }
 
-export default AuthorTab
+export default AuthorInfo
