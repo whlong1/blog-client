@@ -25,7 +25,10 @@ const BlogDetails = (props) => {
 
   const handleAddComment = async (commentData) => {
     const newComment = await blogService.createComment(id, commentData)
-    newComment.author = props.user
+    newComment.author = {
+      _id: props.user.profile,
+      name: props.user.name,
+    }
     setBlog({ ...blog, comments: [...blog.comments, newComment] })
   }
 
@@ -52,7 +55,7 @@ const BlogDetails = (props) => {
       <section>
         <header><h1>Comments</h1></header>
         <NewComment handleAddComment={handleAddComment} />
-        <Comments comments={blog.comments} />
+        <Comments comments={blog.comments} user={props.user} />
       </section>
     </main>
   )

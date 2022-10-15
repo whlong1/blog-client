@@ -2,14 +2,18 @@
 import CommentCard from '../CommentCard/CommentCard'
 
 
-const Comments = ({ comments }) => {
+const Comments = (props) => {
 
-  if (!comments) return <h4>No Comments</h4>
+  if (!props.comments) return <h4>No Comments</h4>
 
   return (
     <>
-      {comments.map((comment) => (
-        <CommentCard key={comment._id} comment={comment} />
+      {props.comments.map((comment) => (
+        <CommentCard
+          key={comment._id}
+          comment={comment}
+          user={props.user}
+        />
       ))}
     </>
   )
