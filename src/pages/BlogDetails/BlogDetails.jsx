@@ -34,7 +34,7 @@ const BlogDetails = (props) => {
   return (
     <main className={styles.container}>
       <article>
-        <header className={styles.container}>
+        <header>
           <h3>MUSIC</h3>
           <h1>{blog.title}</h1>
           <span>
