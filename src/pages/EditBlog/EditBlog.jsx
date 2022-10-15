@@ -5,6 +5,7 @@ const EditBlog = (props) => {
   const { state } = useLocation()
   const [form, setForm] = useState(state)
 
+  console.log(state)
   const handleChange = ({ target }) => {
     setForm({ ...form, [target.name]: target.value })
   }
@@ -28,7 +29,7 @@ const EditBlog = (props) => {
           onChange={handleChange}
         />
         <label htmlFor="text-input">Text</label>
-        <input
+        <textarea
           required
           type="text"
           name="text"

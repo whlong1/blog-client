@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 import styles from './BlogDetails.module.css'
 
 // Components
@@ -26,7 +26,7 @@ const BlogDetails = (props) => {
   const handleAddComment = async (commentData) => {
     const newComment = await blogService.createComment(id, commentData)
     newComment.author = props.user
-    setBlog({...blog, comments: [...blog.comments, newComment]})
+    setBlog({ ...blog, comments: [...blog.comments, newComment] })
   }
 
   if (!blog) return <Loading />
@@ -37,7 +37,10 @@ const BlogDetails = (props) => {
         <header className={styles.container}>
           <h3>MUSIC</h3>
           <h1>{blog.title}</h1>
-          <AuthorTab content={blog} />
+          <span>
+            <AuthorTab content={blog} />
+            <Link to={`/blogs/${id}/edit`} state={blog}>Edit</Link>
+          </span>
         </header>
         <p>{blog.text}</p>
       </article>

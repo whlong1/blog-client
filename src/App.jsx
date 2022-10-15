@@ -83,7 +83,7 @@ const App = () => {
           </ProtectedRoute>
         } />
 
-        <Route path="/blogs/edit" element={
+        <Route path="/blogs/:id/edit" element={
           <ProtectedRoute user={user}>
             <EditBlog handleUpdateBlog={handleUpdateBlog} />
           </ProtectedRoute>
@@ -113,3 +113,4 @@ const App = () => {
 }
 
 export default App
+
