@@ -29,20 +29,3 @@
   margin-left: 35px;
   text-align: right;
 }
-
-@media only screen and (max-width: 600px) { 
-  .container li {
-    /* margin-left: 35px; */
-    
-    /* margin: 0; */
-    /* font-size: 15px; */
-  }
-  .container ul {
-    /* padding: 0; */
-    /* align-items: center; */
-    /* width: 100%; */
-  }
-  .container img {
-    /* display: none; */
-  }
-}
