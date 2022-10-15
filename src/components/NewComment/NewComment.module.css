@@ -1,18 +1,34 @@
 .container {
+  padding: 21px;
   max-width: 100%;
 }
 
+.container span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container span button {
+  width: 30px;
+  display: flex;
+  color: black;
+  align-items: center;
+  justify-content: center;
+}
+
 .container h3 {
+  margin: 0;
   color: black;
 }
 
-.container input, textarea, select, button { 
+.container input, textarea { 
   width: 100%;
   padding: 14px;
   font-size: 14px;
   resize: vertical;
   border-radius: 5px;
-  margin: 7px 0px 14px 0px;
+  margin: 14px 0px 14px 0px;
   border: 1px solid rgb(220, 220, 220);
 }
 

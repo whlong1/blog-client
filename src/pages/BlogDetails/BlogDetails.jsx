@@ -53,7 +53,7 @@ const BlogDetails = (props) => {
         <p>{blog.text}</p>
       </article>
       <section>
-        <header><h1>Comments</h1></header>
+        <h1>Comments</h1>
         <NewComment handleAddComment={handleAddComment} />
         <Comments comments={blog.comments} user={props.user} />
       </section>
