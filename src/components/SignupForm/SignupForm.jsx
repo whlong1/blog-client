@@ -103,8 +103,9 @@ const SignupForm = (props) => {
         <input
           type="file"
           name="photo"
+          id="photo-upload"
           onChange={handleChangePhoto}
-          style={photoData ? { color: 'black' } : { color: 'transparent' }}
+          // style={photoData ? { color: 'black' } : { color: 'transparent' }}
         />
       </div>
       <div className={styles.inputContainer}>
