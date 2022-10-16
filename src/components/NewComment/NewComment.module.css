@@ -1,26 +1,13 @@
 .container {
-  /* padding: 21px; */
   padding: 0;
-  max-width: 100%;
-  
+  display: flex;
   border: none;
+  max-width: 100%;
   box-shadow: none;
+  flex-direction: row;
+  align-items: center;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
-}
-
-.container span {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.container span button {
-  width: 30px;
-  display: flex;
-  color: black;
-  align-items: center;
-  justify-content: center;
 }
 
 .container h3 {
@@ -46,12 +33,20 @@
 }
 
 .container button[type="submit"] {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  display: flex;
   border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.container button[type="submit"]:hover {
+  cursor: pointer;
 }
 
 .container button[type="submit"] img {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }

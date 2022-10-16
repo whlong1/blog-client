@@ -4,7 +4,6 @@ import Icon from "../Icon/Icon"
 
 const NewComment = ({ handleAddComment }) => {
   const [form, setForm] = useState({ text: '' })
-  // const [visible, setVisible] = useState(false)
 
   const handleChange = ({ target }) => {
     setForm({ ...form, [target.name]: target.value })
@@ -14,18 +13,10 @@ const NewComment = ({ handleAddComment }) => {
     e.preventDefault()
     handleAddComment(form)
     setForm({ text: '' })
-    // setVisible(false)
   }
 
   return (
     <form className={styles.container} onSubmit={handleSubmit}>
-      {/* <span>
-        <button type="button" onClick={() => setVisible(!visible)}>
-          {visible ? "-" : "+"}
-        </button>
-      </span> */}
-      {/* {visible && */}
-      {/* <> */}
       <textarea
         required
         type="text"
@@ -36,10 +27,8 @@ const NewComment = ({ handleAddComment }) => {
         onChange={handleChange}
       />
       <button type="submit">
-        <Icon category="Create"/>
+        <Icon category="Create" />
       </button>
-      {/* </> */}
-      {/* } */}
     </form>
   )
 }
