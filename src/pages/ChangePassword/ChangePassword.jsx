@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import styles from './ChangePassword.module.css'
-import SignupIcon from '../../assets/branding/signup.svg'
+import ChangeIcon from '../../assets/branding/change.svg'
 import ChangePasswordForm from '../../components/ChangePasswordForm/ChangePasswordForm'
 
 const ChangePassword = props => {
@@ -13,7 +13,7 @@ const ChangePassword = props => {
   return (
     <main className={styles.container}>
       <section>
-        <img src={SignupIcon} alt="An owl sitting on a sign" />
+        <img src={ChangeIcon} alt="An owl sitting on a sign" />
       </section>
       <section>
         <ChangePasswordForm
