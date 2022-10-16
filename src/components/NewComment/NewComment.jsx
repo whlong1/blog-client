@@ -1,5 +1,7 @@
 import { useState } from "react"
 import styles from './NewComment.module.css'
+
+// Components
 import Icon from "../Icon/Icon"
 
 const NewComment = ({ handleAddComment }) => {
@@ -26,9 +28,7 @@ const NewComment = ({ handleAddComment }) => {
         placeholder="Add a Comment"
         onChange={handleChange}
       />
-      <button type="submit">
-        <Icon category="Create" />
-      </button>
+      <button type="submit"><Icon category="Create" /></button>
     </form>
   )
 }

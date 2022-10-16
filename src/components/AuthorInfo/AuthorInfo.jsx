@@ -3,10 +3,10 @@ import ProfileIcon from '../../assets/icons/profile.png'
 import DateCard from "../DateCard/DateCard"
 
 const AuthorInfo = ({ content }) => {
-  const avatar = content.author.avatar ? content.author.avatar : ProfileIcon
+  const photo = content.author.photo ? content.author.photo : ProfileIcon
   return (
     <div className={styles.container}>
-      <img src={avatar} alt="The user's avatar" />
+      <img src={photo} alt="The user's photo" />
       <section>
         <h4>{content.author.name}</h4>
         <DateCard createdAt={content.createdAt} />
