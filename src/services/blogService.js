@@ -74,6 +74,17 @@ const updateComment = async (blogId, commentId, commentData) => {
   return res.json()
 }
 
+const deleteComment = async (blogId, commentId) => {
+  console.log(commentId)
+  const res = await fetch(`${BASE_URL}/${blogId}/comments/${commentId}`, {
+    method: 'DELETE',
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`
+    }
+  })
+  return res.json()
+}
+
 export {
   index,
   show,
@@ -81,5 +92,6 @@ export {
   update,
   deleteBlog,
   createComment,
-  updateComment
+  updateComment,
+  deleteComment
 }
