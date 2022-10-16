@@ -75,7 +75,6 @@ const updateComment = async (blogId, commentId, commentData) => {
 }
 
 const deleteComment = async (blogId, commentId) => {
-  console.log(commentId)
   const res = await fetch(`${BASE_URL}/${blogId}/comments/${commentId}`, {
     method: 'DELETE',
     headers: {
