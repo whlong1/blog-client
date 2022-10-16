@@ -2,7 +2,7 @@ import * as tokenService from '../services/tokenService'
 
 const BASE_URL = `${process.env.REACT_APP_BACK_END_SERVER_URL}/api/blogs`
 
-async function index() {
+const index = async () => {
   const res = await fetch(BASE_URL, {
     headers: { 'Authorization': `Bearer ${tokenService.getToken()}` },
   })
