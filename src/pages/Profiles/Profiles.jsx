@@ -17,9 +17,11 @@ const Profiles = () => {
 
   return (
     <main className={styles.container}>
-      {profiles.map(profile => (
-        <h3>{profile.name}</h3>
-      ))}
+      <ul>
+        {profiles.map(profile => (
+          <li>{profile.name}</li>
+        ))}
+      </ul>
     </main>
   )
 }
