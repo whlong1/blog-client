@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styles from './NavBar.module.css'
 import Logo from '../../assets/branding/logo.svg'
 
@@ -6,22 +6,22 @@ const NavBar = ({ user, handleLogout }) => {
 
   const publicLinks = (
     <ul>
-      <li><Link to="/login">LOG IN</Link></li>
-      <li><Link to="/signup">SIGN UP</Link></li>
+      <li><NavLink to="/login">LOG IN</NavLink></li>
+      <li><NavLink to="/signup">SIGN UP</NavLink></li>
     </ul>
   )
 
   const protectedLinks = (
     <ul>
-      <li><Link to="/blogs">BLOGS</Link></li>
-      <li><Link to="/blogs/new">NEW BLOG</Link></li>
-      <li><Link to="/logout" onClick={handleLogout}>LOG OUT</Link></li>
+      <li><NavLink to="/blogs">BLOGS</NavLink></li>
+      <li><NavLink to="/blogs/new">NEW BLOG</NavLink></li>
+      <li><NavLink to="/logout" onClick={handleLogout}>LOG OUT</NavLink></li>
     </ul>
   )
 
   return (
     <nav className={styles.container}>
-      <Link to={'/'}><img src={Logo} alt="A cute owl" /></Link>
+      <NavLink to={'/'}><img src={Logo} alt="A cute owl" /></NavLink>
       {user ? protectedLinks : publicLinks}
     </nav>
   )

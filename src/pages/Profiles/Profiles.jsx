@@ -2,9 +2,6 @@ import { useState, useEffect } from 'react'
 import styles from './Profiles.module.css'
 import * as profileService from '../../services/profileService'
 
-// Components
-import UserCard from '../../components/UserCard/UserCard'
-
 const Profiles = () => {
   const [profiles, setProfiles] = useState([])
 
@@ -21,7 +18,7 @@ const Profiles = () => {
   return (
     <main className={styles.container}>
       {profiles.map(profile => (
-        <UserCard key={profile._id} user={profile} />
+        <h3>{profile.name}</h3>
       ))}
     </main>
   )
