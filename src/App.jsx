@@ -25,8 +25,6 @@ const App = () => {
   const [blogs, setBlogs] = useState([])
   const [user, setUser] = useState(authService.getUser())
 
-  console.log(user)
-
   const handleLogout = () => {
     setUser(null)
     authService.logout()
