@@ -9,14 +9,14 @@ const index = async () => {
   return res.json()
 }
 
-async function show(id) {
+const show = async (id) => {
   const res = await fetch(`${BASE_URL}/${id}`, {
     headers: { 'Authorization': `Bearer ${tokenService.getToken()}` },
   })
   return res.json()
 }
 
-async function create(blogData) {
+const create = async (blogData) => {
   const res = await fetch(BASE_URL, {
     method: 'POST',
     headers: {
@@ -28,7 +28,7 @@ async function create(blogData) {
   return res.json()
 }
 
-async function update(blogData) {
+const update = async (blogData) => {
   const res = await fetch(`${BASE_URL}/${blogData._id}`, {
     method: 'PUT',
     headers: {
@@ -40,7 +40,7 @@ async function update(blogData) {
   return res.json()
 }
 
-async function deleteBlog(id) {
+const deleteBlog = async (id) => {
   const res = await fetch(`${BASE_URL}/${id}`, {
     method: 'DELETE',
     headers: {
@@ -50,9 +50,21 @@ async function deleteBlog(id) {
   return res.json()
 }
 
-async function createComment(id, commentData) {
+const createComment = async (id, commentData) => {
   const res = await fetch(`${BASE_URL}/${id}/comments`, {
     method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(commentData)
+  })
+  return res.json()
+}
+
+const updateComment = async (blogId, commentId, commentData) => {
+  const res = await fetch(`${BASE_URL}/${blogId}/comments/${commentId}`, {
+    method: 'PUT',
     headers: {
       'Authorization': `Bearer ${tokenService.getToken()}`,
       'Content-Type': 'application/json'
@@ -68,5 +80,6 @@ export {
   create,
   update,
   deleteBlog,
-  createComment
+  createComment,
+  updateComment
 }

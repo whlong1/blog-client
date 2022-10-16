@@ -4,7 +4,7 @@ import styles from './NewComment.module.css'
 // Components
 import Icon from "../Icon/Icon"
 
-const NewComment = ({ handleAddComment }) => {
+const NewComment = (props) => {
   const [form, setForm] = useState({ text: '' })
 
   const handleChange = ({ target }) => {
@@ -13,7 +13,7 @@ const NewComment = ({ handleAddComment }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    handleAddComment(form)
+    props.handleAddComment(form)
     setForm({ text: '' })
   }
 

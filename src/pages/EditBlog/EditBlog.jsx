@@ -62,4 +62,3 @@ const EditBlog = (props) => {
 }
 
 export default EditBlog
-

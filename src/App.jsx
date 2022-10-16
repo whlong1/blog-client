@@ -11,6 +11,7 @@ import NavBar from './components/NavBar/NavBar'
 import Profiles from './pages/Profiles/Profiles'
 import BlogList from './pages/BlogList/BlogList'
 import EditBlog from './pages/EditBlog/EditBlog'
+import EditComment from './pages/EditComment/EditComment'
 import BlogDetails from './pages/BlogDetails/BlogDetails'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
@@ -24,6 +25,8 @@ const App = () => {
   const [blogs, setBlogs] = useState([])
   const [user, setUser] = useState(authService.getUser())
 
+  console.log(user)
+
   const handleLogout = () => {
     setUser(null)
     authService.logout()
@@ -35,20 +38,17 @@ const App = () => {
 
   const handleAddBlog = async (blogData) => {
     const newBlog = await blogService.create(blogData)
-    newBlog.author = user
     setBlogs([newBlog, ...blogs])
     navigate('/blogs')
   }
 
   const handleUpdateBlog = async (blogData) => {
     const updatedBlog = await blogService.update(blogData)
-    updatedBlog.author = user
     setBlogs(blogs.map((b) => blogData._id === b._id ? updatedBlog : b))
     navigate('/blogs')
   }
 
   const handleDeleteBlog = async (id) => {
-    console.log('Deleted Blog Id:', id)
     const deletedBlog = await blogService.deleteBlog(id)
     setBlogs(blogs.filter(b => b._id !== deletedBlog._id))
     navigate('/blogs')
@@ -104,6 +104,12 @@ const App = () => {
         <Route path="/changePassword" element={
           <ProtectedRoute user={user}>
             <ChangePassword handleSignupOrLogin={handleSignupOrLogin} />
+          </ProtectedRoute>
+        } />
+
+        <Route path="/blogs/:blogId/comments/:commentId" element={
+          <ProtectedRoute user={user}>
+            <EditComment />
           </ProtectedRoute>
         } />
 

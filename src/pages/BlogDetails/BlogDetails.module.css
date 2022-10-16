@@ -4,7 +4,7 @@
   overflow: scroll;
   align-items: center;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--card-background);
 }
 
 .container article, .container > section {
@@ -36,8 +36,8 @@
   margin: 0;
   font-size: 16px;
   font-weight: 600;
-  color: #00a0df;
   margin-bottom: 10px;
+  color: var(--primary);
 }
 
 .container span {
@@ -60,7 +60,7 @@
   margin-left: 7px;
   border-radius: 5px;
   text-align: center;
-  border: 1px solid rgb(220, 220, 220);
+  border: 1px solid var(--border);
 }
 
 .container span button, .container span a  {
@@ -73,7 +73,7 @@
   min-height: 140px;
   border-radius: 5px;
   margin: 14px 0px 14px;
-  background-color: white;
+  background-color: var(--card-background);
 }
 
 .container > section h1 {
