@@ -93,6 +93,12 @@ const App = () => {
           </ProtectedRoute>
         } />
 
+        <Route path="/blogs/:blogId/comments/:commentId" element={
+          <ProtectedRoute user={user}>
+            <EditComment />
+          </ProtectedRoute>
+        } />
+
         <Route path="/profiles" element={
           <ProtectedRoute user={user}>
             <Profiles />
@@ -102,12 +108,6 @@ const App = () => {
         <Route path="/changePassword" element={
           <ProtectedRoute user={user}>
             <ChangePassword handleSignupOrLogin={handleSignupOrLogin} />
-          </ProtectedRoute>
-        } />
-
-        <Route path="/blogs/:blogId/comments/:commentId" element={
-          <ProtectedRoute user={user}>
-            <EditComment />
           </ProtectedRoute>
         } />
 

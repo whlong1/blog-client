@@ -43,6 +43,7 @@
 .container span {
   width: 100%;
   display: flex;
+  margin-top: 10px;
   align-items: center;
 }
 
@@ -72,8 +73,7 @@
   width: 100%;
   min-height: 140px;
   border-radius: 5px;
-  margin: 14px 0px 14px;
-  background-color: var(--card-background);
+  margin: 4px 0px 14px;
 }
 
 .container > section h1 {
