@@ -18,6 +18,10 @@
   font-family: canada-type-gibson, sans-serif;
 }
 
+.container textarea {
+  min-height: 50px;
+}
+
 .container label {
   font-weight: 600;
   margin: 7px 0px 14px 0px;
