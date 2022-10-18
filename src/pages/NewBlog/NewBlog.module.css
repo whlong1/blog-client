@@ -40,7 +40,7 @@
   color: rgb(200, 200, 200);
 }
 
-input:focus, select:focus {
+input:focus, select:focus, textarea:focus {
   outline: none;
   border: 1px solid var(--primary);
 }
