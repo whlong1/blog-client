@@ -58,7 +58,7 @@ const App = () => {
       setBlogs(data)
     }
     fetchAllBlogs()
-  }, [user])
+  }, [])
 
   return (
     <>
