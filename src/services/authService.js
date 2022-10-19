@@ -16,7 +16,6 @@ async function signup(user, photo) {
       tokenService.setToken(json.token)
       if (photo) {
         const photoData = new FormData()
-        console.log(photoData)
         photoData.append('photo', photo)
         return await addProfilePhoto(
           photoData,
