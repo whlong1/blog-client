@@ -11,10 +11,12 @@ const Interactions = ({ id, user, blog, handleDeleteBlog }) => {
   const authorOptions = (
     <>
       <Link to={`/blogs/${id}/edit`} state={blog}>
-        <Icon category="Edit" />
+        {/* <Icon category="Edit" /> */}
+        Edut
       </Link>
       <button onClick={() => handleDeleteBlog(id)}>
-        <Icon category="Trash" />
+        {/* <Icon category="Trash" /> */}
+        Delete
       </button>
     </>
   )
