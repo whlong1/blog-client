@@ -13,7 +13,7 @@ import Comments from '../../assets/icons/comments.svg'
 import Calendar from '../../assets/icons/calendar.svg'
 import Televison from '../../assets/icons/television.svg'
 
-const Icon = ({ category }) => {
+const Icon = ({ category, style }) => {
   const icons = {
     Add: Add,
     News: News,
