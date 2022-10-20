@@ -12,7 +12,7 @@ const Interactions = ({ id, user, blog, handleDeleteBlog }) => {
     <>
       <Link to={`/blogs/${id}/edit`} state={blog}>
         {/* <Icon category="Edit" /> */}
-        Edut
+        Edit
       </Link>
       <button onClick={() => handleDeleteBlog(id)}>
         {/* <Icon category="Trash" /> */}
