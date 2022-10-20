@@ -54,3 +54,11 @@
   width: 18px;
   height: 18px;
 }
+
+/* NEW CSS */
+
+.container button[type="submit"] img {
+  width: 25px;
+  height: 25px;
+  margin-top: 1px;
+}
