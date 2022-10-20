@@ -41,7 +41,12 @@ const BlogDetails = (props) => {
         <header>
           <h3>{blog.category.toUpperCase()}</h3>
           <h1>{blog.title}</h1>
-          <Interactions id={id} blog={blog} user={props.user} handleDeleteBlog={props.handleDeleteBlog} />
+          <Interactions
+            id={id}
+            blog={blog}
+            user={props.user}
+            handleDeleteBlog={props.handleDeleteBlog}
+          />
         </header>
         <p>{blog.text}</p>
       </article>
