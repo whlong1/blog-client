@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom"
-import Icon from "../Icon/Icon"
+import Liked from '../../assets/icons/liked.svg'
 
 // Components
+import Icon from "../Icon/Icon"
 import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
 
 const Interactions = ({ id, user, blog, handleDeleteBlog }) => {
+  const LikedIcon = <img src={Liked} alt="A heart" />
 
   const authorOptions = (
     <>
@@ -12,19 +14,15 @@ const Interactions = ({ id, user, blog, handleDeleteBlog }) => {
         <Icon category="Edit" />
       </Link>
       <button onClick={() => handleDeleteBlog(id)}>
-        <Icon category="Trash"/>
+        <Icon category="Trash" />
       </button>
     </>
   )
 
   const readerOptions = (
     <>
-      <button>
-        <Icon category={"Comments"} />
-      </button>
-      <button>
-        <Icon category={"Like"} />
-      </button>
+      <button><Icon category={"Comments"} /></button>
+      <button><Icon category={"Like"} /></button>
     </>
   )
 
