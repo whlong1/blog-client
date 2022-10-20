@@ -23,8 +23,8 @@ const Interactions = ({ id, user, blog, handleDeleteBlog }) => {
 
   const readerOptions = (
     <>
-      <button><Icon category={"Comments"} /></button>
-      <button><Icon category={"Like"} /></button>
+      {/* <button><Icon category={"Comments"} /></button>
+      <button><Icon category={"Like"} /></button> */}
     </>
   )
 
