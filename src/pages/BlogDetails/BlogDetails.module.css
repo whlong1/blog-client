@@ -88,7 +88,7 @@
 
 /* BUTTON STYLING */
 
-.container header button, .container header a {
+/* .container header button, .container header a {
   width: 30px;
   height: 30px;
   display: flex;
@@ -102,21 +102,21 @@
   width: 24px;
   height: 24px;
   opacity: .25;
-}
+} */
 
 /* HOVER EFFECTS */
 
-.container header button:hover, .container header a:hover {
+/* .container header button:hover, .container header a:hover {
   background-color: var(--border);
 }
 
 .container header button:hover img, .container header a:hover img {
   filter: invert(1);
   opacity: 1;
-}
+} */
 
 /* ACTIVE EFFECTS */
 
-.container header button:active {
+/* .container header button:active {
   background-color: rgb(190, 190, 190);
-}
+} */
