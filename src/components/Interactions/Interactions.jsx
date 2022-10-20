@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import Icon from "../Icon/Icon"
 
 // Components
 import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
