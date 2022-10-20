@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { useParams, Link } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import styles from './BlogDetails.module.css'
 
 // Services
@@ -8,8 +8,8 @@ import * as blogService from '../../services/blogService'
 // Components
 import Loading from "../Loading/Loading"
 import Comments from "../../components/Comments/Comments"
-import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
 import NewComment from "../../components/NewComment/NewComment"
+import Interactions from "../../components/Interactions/Interactions"
 
 const BlogDetails = (props) => {
   const { id } = useParams()
@@ -41,15 +41,7 @@ const BlogDetails = (props) => {
         <header>
           <h3>{blog.category.toUpperCase()}</h3>
           <h1>{blog.title}</h1>
-          <span>
-            <AuthorInfo content={blog} />
-            {blog.author._id === props.user.profile &&
-              <>
-                <Link to={`/blogs/${id}/edit`} state={blog}>Edit</Link>
-                <button onClick={() => props.handleDeleteBlog(id)}>Delete</button>
-              </>
-            }
-          </span>
+          <Interactions id={id} blog={blog} user={props.user} />
         </header>
         <p>{blog.text}</p>
       </article>
