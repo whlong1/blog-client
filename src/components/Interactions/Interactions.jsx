@@ -12,7 +12,7 @@ const Interactions = ({ id, user, blog, handleDeleteBlog }) => {
         <Icon category="Edit" />
       </Link>
       <button onClick={() => handleDeleteBlog(id)}>
-        {/* <Icon category="Delete"/> */}
+        <Icon category="Trash"/>
       </button>
     </>
   )

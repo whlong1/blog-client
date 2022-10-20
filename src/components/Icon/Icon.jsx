@@ -5,6 +5,7 @@ import Like from '../../assets/icons/like.svg'
 import Liked from '../../assets/icons/liked.svg'
 import Music from '../../assets/icons/music.svg'
 import Games from '../../assets/icons/games.svg'
+import Trash from '../../assets/icons/trash.svg'
 import Movies from '../../assets/icons/movies.svg'
 import Sports from '../../assets/icons/sports.svg'
 import Create from '../../assets/icons/create.svg'
@@ -21,6 +22,7 @@ const Icon = ({ category }) => {
     Music: Music,
     Games: Games,
     Liked: Liked,
+    Trash: Trash,
     Movies: Movies,
     Sports: Sports,
     Create: Create,
