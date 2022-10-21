@@ -28,7 +28,7 @@ const NewComment = (props) => {
         placeholder="Add a Comment"
         onChange={handleChange}
       />
-      <button type="submit"><Icon category="Add" /></button>
+      <button type="submit"><Icon category="Create" /></button>
     </form>
   )
 }
