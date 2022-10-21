@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import AuthorInfo from "../AuthorInfo/AuthorInfo"
+import Icon from "../Icon/Icon"
 
 const CommentCard = ({ comment, blogId, user, handleDeleteComment }) => {
   return (
@@ -10,10 +11,10 @@ const CommentCard = ({ comment, blogId, user, handleDeleteComment }) => {
           {comment.author._id === user.profile &&
             <>
               <Link to={`/blogs/${blogId}/comments/${comment._id}`} state={comment}>
-                EDIT
+                <Icon category="Edit" />
               </Link>
-              <button onClick={()=> handleDeleteComment(blogId, comment._id)}>
-                DELETE
+              <button onClick={() => handleDeleteComment(blogId, comment._id)}>
+                <Icon category="Trashcan" />
               </button>
             </>
           }
