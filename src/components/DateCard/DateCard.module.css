@@ -4,12 +4,9 @@
   align-items: center;
 }
 
-/* NEW */
 .container img {
   width: 17px;
   height: 17px;
-
   margin-right: 2px;
   margin-left: -2px;
 }
-/* - */
