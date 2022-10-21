@@ -14,7 +14,7 @@ const CommentCard = ({ comment, blogId, user, handleDeleteComment }) => {
                 <Icon category="Edit" />
               </Link>
               <button onClick={() => handleDeleteComment(blogId, comment._id)}>
-                <Icon category="Trashcan" />
+                <Icon category="Trash" />
               </button>
             </>
           }
