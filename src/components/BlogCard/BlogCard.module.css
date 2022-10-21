@@ -62,10 +62,17 @@
   font-size: 11px;
 }
 
+/* UPDATE */
+
 .container div > img {
   width: 30px;
+  height: 30px;
+  object-fit: cover;
 }
 
 .container div section img {
   width: 14px;
+  height: 14px;
 }
+
+/* - */
