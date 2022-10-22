@@ -1,10 +1,25 @@
+import { useState } from "react"
 import { Link } from "react-router-dom"
+import Lottie from 'react-lottie-player'
 
 // Components
 import Icon from "../Icon/Icon"
 import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
 
+import heartAnim from "../../assets/animation/heart.json"
+
+const style = {
+  width: "30px",
+  height: "30px",
+}
+
 const Interactions = ({ id, user, blog, handleDeleteBlog }) => {
+  const [play, setPlay] = useState(true)
+  const [direction, setDirection] = useState(1)
+
+  const handleLike = () => {
+    setPlay(true)
+  }
 
   const authorOptions = (
     <>
@@ -19,8 +34,24 @@ const Interactions = ({ id, user, blog, handleDeleteBlog }) => {
 
   const readerOptions = (
     <>
-      <button><Icon category={"Comments"} /></button>
-      <button><Icon category={"Like"} /></button>
+      <button>
+        <Icon category={"Comments"} />
+      </button>
+      <button onClick={handleLike} style={{ padding: "0px" }}>
+        <Lottie
+          play={play}
+          speed={1}
+          loop={false}
+          style={style}
+          segments={[5, 30]}
+          direction={direction}
+          animationData={heartAnim}
+          onComplete={() => {
+            setPlay(false);
+            setDirection(direction * -1);
+          }}
+        />
+      </button>
     </>
   )
 
