@@ -114,6 +114,34 @@ const deleteComment = async (blogId, commentId) => {
   }
 }
 
+const addLikeToBlog = async (blogId) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${blogId}/likes`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`
+      }
+    })
+    return res.json()
+  } catch (err) {
+    throw err
+  }
+}
+
+const removeLikeFromBlog = async (blogId) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${blogId}/likes`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`
+      }
+    })
+    return res.json()
+  } catch (err) {
+    throw err
+  }
+}
+
 export {
   index,
   show,
@@ -122,5 +150,7 @@ export {
   deleteBlog,
   createComment,
   updateComment,
-  deleteComment
+  deleteComment,
+  addLikeToBlog,
+  removeLikeFromBlog,
 }
