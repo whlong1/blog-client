@@ -14,6 +14,7 @@ import Interactions from "../../components/Interactions/Interactions"
 const BlogDetails = (props) => {
   const { id } = useParams()
   const [blog, setBlog] = useState(null)
+  const [pending, setPending] = useState(false)
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -21,7 +22,7 @@ const BlogDetails = (props) => {
       setBlog(data)
     }
     fetchBlog()
-  }, [id])
+  }, [id, props.user.profile])
 
   const handleAddComment = async (commentData) => {
     const newComment = await blogService.createComment(id, commentData)
@@ -31,6 +32,20 @@ const BlogDetails = (props) => {
   const handleDeleteComment = async (blogId, commentId) => {
     await blogService.deleteComment(blogId, commentId)
     setBlog({ ...blog, comments: blog.comments.filter((c) => c._id !== commentId) })
+  }
+
+  const handleAddLike = async () => {
+    setPending(true)
+    const likes = await blogService.addLikeToBlog(id)
+    setBlog({ ...blog, likes: likes })
+    setPending(false)
+  }
+
+  const handleRemoveLike = async () => {
+    setPending(true)
+    const likes = await blogService.removeLikeFromBlog(id)
+    setBlog({ ...blog, likes: likes })
+    setPending(false)
   }
 
   if (!blog) return <Loading />
@@ -44,7 +59,10 @@ const BlogDetails = (props) => {
           <Interactions
             id={id}
             blog={blog}
+            pending={pending}
             user={props.user}
+            handleAddLike={handleAddLike}
+            handleRemoveLike={handleRemoveLike}
             handleDeleteBlog={props.handleDeleteBlog}
           />
         </header>

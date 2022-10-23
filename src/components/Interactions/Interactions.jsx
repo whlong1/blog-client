@@ -14,16 +14,29 @@ const style = {
   height: "30px",
 }
 
-const Interactions = ({ id, user, blog, handleDeleteBlog }) => {
-  const [play, setPlay] = useState(false)
-  const [liked, setLiked] = useState(false)
-  const [pending, setPending] = useState(false)
-  const [direction, setDirection] = useState(1)
+const Interactions = (props) => {
+  const {
+    id,
+    user,
+    blog,
+    pending,
+    handleAddLike,
+    handleRemoveLike,
+    handleDeleteBlog,
+  } = props
 
-  const handleLike = () => {
-    setPending(true)
+  const [direction, setDirection] = useState(1)
+  const [animActive, setAnimActive] = useState(false)
+  const [play, setPlay] = useState(blog.likes.includes(user.profile))
+  
+  const handleClick = () => {
     setPlay(true)
-    setLiked(!liked)
+    setAnimActive(true)
+    if (blog.likes.includes(user.profile)) {
+      handleRemoveLike()
+    } else {
+      handleAddLike()
+    }
   }
 
   const authorOptions = (
@@ -42,7 +55,7 @@ const Interactions = ({ id, user, blog, handleDeleteBlog }) => {
       <button>
         <Icon category={"Comments"} />
       </button>
-      <button onClick={handleLike} style={{ padding: "0px" }} disabled={pending}>
+      <button onClick={handleClick} style={{ padding: "0px" }} disabled={animActive || pending}>
         <Lottie
           play={play}
           speed={1}
@@ -53,8 +66,8 @@ const Interactions = ({ id, user, blog, handleDeleteBlog }) => {
           animationData={heartAnim}
           onComplete={() => {
             setPlay(false);
+            setAnimActive(false);
             setDirection(direction * -1);
-            setPending(false)
           }}
         />
       </button>
