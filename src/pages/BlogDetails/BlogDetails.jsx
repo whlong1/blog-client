@@ -10,14 +10,14 @@ import Loading from "../Loading/Loading"
 import Comments from "../../components/Comments/Comments"
 import NewComment from "../../components/NewComment/NewComment"
 import Actions from "../../components/Actions/Actions"
-// import Interactions from "../../components/Interactions/Interactions"
+import Interactions from "../../components/Interactions/Interactions"
 import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
 
 
 const BlogDetails = (props) => {
   const { id } = useParams()
   const [blog, setBlog] = useState(null)
-  // const [pending, setPending] = useState(false)
+  const [pending, setPending] = useState(false)
 
   console.log(blog)
 
@@ -58,7 +58,7 @@ const BlogDetails = (props) => {
           <h3>{blog.category.toUpperCase()}</h3>
           <h1>{blog.title}</h1>
 
-          <span>
+          {/* <span>
             <AuthorInfo content={blog} />
             <Actions
               id={id}
@@ -67,8 +67,8 @@ const BlogDetails = (props) => {
               handleAddLike={handleAddLike}
               handleRemoveLike={handleRemoveLike}
             />
-          </span>
-          {/* <Interactions
+          </span> */}
+          <Interactions
             id={id}
             blog={blog}
             pending={pending}
@@ -76,7 +76,7 @@ const BlogDetails = (props) => {
             handleAddLike={handleAddLike}
             handleRemoveLike={handleRemoveLike}
             handleDeleteBlog={props.handleDeleteBlog}
-          /> */}
+          />
         </header>
         <p>{blog.text}</p>
       </article>
