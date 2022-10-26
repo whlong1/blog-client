@@ -114,7 +114,7 @@ const deleteComment = async (blogId, commentId) => {
   }
 }
 
-const addLikeToBlog = async (blogId) => {
+const addLike = async (blogId) => {
   try {
     const res = await fetch(`${BASE_URL}/${blogId}/likes`, {
       method: 'POST',
@@ -128,7 +128,7 @@ const addLikeToBlog = async (blogId) => {
   }
 }
 
-const removeLikeFromBlog = async (blogId) => {
+const removeLike = async (blogId) => {
   try {
     const res = await fetch(`${BASE_URL}/${blogId}/likes`, {
       method: 'DELETE',
@@ -151,6 +151,6 @@ export {
   createComment,
   updateComment,
   deleteComment,
-  addLikeToBlog,
-  removeLikeFromBlog,
+  addLike,
+  removeLike,
 }

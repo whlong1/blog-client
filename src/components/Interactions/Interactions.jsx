@@ -9,11 +9,6 @@ import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
 // Assets
 import heartAnim from "../../assets/animation/heart.json"
 
-const style = {
-  width: "30px",
-  height: "30px",
-}
-
 const Interactions = (props) => {
   const {
     id,
@@ -28,7 +23,7 @@ const Interactions = (props) => {
   const [direction, setDirection] = useState(1)
   const [animActive, setAnimActive] = useState(false)
   const [play, setPlay] = useState(blog.likes.includes(user.profile))
-  
+
   const handleClick = () => {
     setPlay(true)
     setAnimActive(true)
@@ -57,10 +52,13 @@ const Interactions = (props) => {
       </button>
       <button onClick={handleClick} style={{ padding: "0px" }} disabled={animActive || pending}>
         <Lottie
+          style={{
+            width: "30px",
+            height: "30px"
+          }}
           play={play}
           speed={1}
           loop={false}
-          style={style}
           segments={[10, 25]}
           direction={direction}
           animationData={heartAnim}
