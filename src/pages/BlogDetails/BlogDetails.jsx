@@ -40,13 +40,17 @@ const BlogDetails = (props) => {
   }
 
   const handleAddLike = async () => {
+    setPending(true)
     await blogService.addLike(id)
     setBlog({ ...blog, likes: [...blog.likes, props.user.profile] })
+    setPending(false)
   }
 
   const handleRemoveLike = async () => {
+    setPending(true)
     await blogService.removeLike(id)
     setBlog({ ...blog, likes: blog.likes.filter((l) => l !== props.user.profile) })
+    setPending(false)
   }
 
   if (!blog) return <Loading />
