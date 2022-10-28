@@ -1,29 +1,37 @@
+import { useState } from "react"
 import { Link } from "react-router-dom"
+import Lottie from 'react-lottie-player'
 
 // Components
 import Icon from "../Icon/Icon"
+
+// Assets
+import heartAnim from "../../assets/animation/heart.json"
 
 const Actions = (props) => {
   const {
     id,
     user,
     blog,
+    pending,
     handleAddLike,
     handleRemoveLike,
     handleDeleteBlog,
   } = props
 
-  const likeButton = (
-    <button onClick={handleAddLike}>
-      <Icon category="Like" />
-    </button>
-  )
+  const [direction, setDirection] = useState(1)
+  const [animActive, setAnimActive] = useState(false)
+  const [play, setPlay] = useState(blog.likes.includes(user.profile))
 
-  const likedButton = (
-    <button onClick={handleRemoveLike}>
-      <Icon category="Liked" />
-    </button>
-  )
+  const handleClick = () => {
+    setPlay(true)
+    setAnimActive(true)
+    if (blog.likes.includes(user.profile)) {
+      handleRemoveLike()
+    } else {
+      handleAddLike()
+    }
+  }
 
   const authorOptions = (
     <>
@@ -41,10 +49,25 @@ const Actions = (props) => {
       <button>
         <Icon category={"Comments"} />
       </button>
-      {blog.likes.includes(user.profile)
-        ? likedButton
-        : likeButton
-      }
+      <button onClick={handleClick} style={{ padding: "0px" }} disabled={animActive || pending}>
+        <Lottie
+          style={{
+            width: "30px",
+            height: "30px"
+          }}
+          play={play}
+          speed={1}
+          loop={false}
+          segments={[10, 25]}
+          direction={direction}
+          animationData={heartAnim}
+          onComplete={() => {
+            setPlay(false);
+            setAnimActive(false);
+            setDirection(direction * -1);
+          }}
+        />
+      </button>
     </>
   )
 

@@ -10,7 +10,7 @@ import Loading from "../Loading/Loading"
 import Comments from "../../components/Comments/Comments"
 import NewComment from "../../components/NewComment/NewComment"
 import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
-import Interactions from "../../components/Interactions/Interactions"
+import Actions from "../../components/Actions/Actions"
 
 const BlogDetails = (props) => {
   const { id } = useParams()
@@ -59,7 +59,7 @@ const BlogDetails = (props) => {
           <h1>{blog.title}</h1>
           <span>
             <AuthorInfo content={blog} />
-            <Interactions
+            <Actions
               id={id}
               blog={blog}
               pending={pending}
