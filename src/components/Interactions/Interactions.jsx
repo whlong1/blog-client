@@ -4,7 +4,6 @@ import Lottie from 'react-lottie-player'
 
 // Components
 import Icon from "../Icon/Icon"
-import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
 
 // Assets
 import heartAnim from "../../assets/animation/heart.json"

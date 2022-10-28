@@ -23,7 +23,7 @@ const BlogDetails = (props) => {
       setBlog(data)
     }
     fetchBlog()
-  }, [id, props.user.profile])
+  }, [id])
 
   const handleAddComment = async (commentData) => {
     const newComment = await blogService.createComment(id, commentData)
