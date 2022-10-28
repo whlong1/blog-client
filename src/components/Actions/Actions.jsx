@@ -26,11 +26,7 @@ const Actions = (props) => {
 
   const handleClick = () => {
     setPlay(true)
-    if (blog.likes.includes(user.profile)) {
-      handleRemoveLike()
-    } else {
-      handleAddLike()
-    }
+    blog.likes.includes(user.profile) ? handleRemoveLike() : handleAddLike()
   }
 
   const authorOptions = (
@@ -44,14 +40,14 @@ const Actions = (props) => {
     </>
   )
 
-  console.log(play)
+  // console.log(play)
 
   const readerOptions = (
     <>
       <button>
         <Icon category={"Comments"} />
       </button>
-      <button onClick={handleClick} style={{ padding: "0px" }} disabled={play}>
+      <button style={{ padding: "0px" }} onClick={handleClick} disabled={play || pending}>
         <Lottie
           speed={1}
           play={play}
