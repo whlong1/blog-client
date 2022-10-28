@@ -60,7 +60,6 @@ const BlogDetails = (props) => {
           <span>
             <AuthorInfo content={blog} />
             <Actions
-              blogId={id}
               blog={blog}
               pending={pending}
               user={props.user}

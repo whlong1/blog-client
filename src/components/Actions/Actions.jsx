@@ -5,7 +5,9 @@ import Lottie from 'react-lottie-player'
 import Icon from "../Icon/Icon"
 import heartAnim from "../../assets/animation/heart.json"
 
-const Actions = ({ user, blog, blogId, pending, handleAddLike, handleRemoveLike, handleDeleteBlog, }) => {
+const Actions = (props) => {
+  const { user, blog, pending, handleAddLike, handleRemoveLike, handleDeleteBlog } = props
+
   const [direction, setDirection] = useState(1)
   const [play, setPlay] = useState(blog.likes.includes(user.profile))
 
@@ -16,10 +18,10 @@ const Actions = ({ user, blog, blogId, pending, handleAddLike, handleRemoveLike,
 
   const authorOptions = (
     <>
-      <Link to={`/blogs/${blogId}/edit`} state={blog}>
+      <Link to={`/blogs/${blog._id}/edit`} state={blog}>
         <Icon category="Edit" />
       </Link>
-      <button onClick={() => handleDeleteBlog(blogId)}>
+      <button onClick={() => handleDeleteBlog(blog._id)}>
         <Icon category="Trash" />
       </button>
     </>
