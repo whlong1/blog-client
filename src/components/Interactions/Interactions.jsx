@@ -73,10 +73,7 @@ const Interactions = (props) => {
   )
 
   return (
-    <span>
-      <AuthorInfo content={blog} />
-      {blog.author._id === user.profile ? authorOptions : readerOptions}
-    </span>
+    blog.author._id === user.profile ? authorOptions : readerOptions
   )
 }
 
