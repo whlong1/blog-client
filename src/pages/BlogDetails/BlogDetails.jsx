@@ -7,10 +7,10 @@ import * as blogService from '../../services/blogService'
 
 // Components
 import Loading from "../Loading/Loading"
+import Actions from "../../components/Actions/Actions"
 import Comments from "../../components/Comments/Comments"
 import NewComment from "../../components/NewComment/NewComment"
 import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
-import Actions from "../../components/Actions/Actions"
 
 const BlogDetails = (props) => {
   const { id } = useParams()
