@@ -18,14 +18,6 @@ const BlogDetails = (props) => {
   const [blog, setBlog] = useState(null)
   const [pending, setPending] = useState(false)
 
-  useEffect(() => {
-    const fetchBlog = async () => {
-      const data = await blogService.show(id)
-      setBlog(data)
-    }
-    fetchBlog()
-  }, [id])
-
   const handleAddComment = async (commentData) => {
     const newComment = await blogService.createComment(id, commentData)
     setBlog({ ...blog, comments: [...blog.comments, newComment] })
@@ -53,6 +45,14 @@ const BlogDetails = (props) => {
   const handleScroll = () => {
     commentRef.current.scrollIntoView()
   }
+
+  useEffect(() => {
+    const fetchBlog = async () => {
+      const data = await blogService.show(id)
+      setBlog(data)
+    }
+    fetchBlog()
+  }, [id])
 
   if (!blog) return <Loading />
 
