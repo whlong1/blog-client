@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { useParams } from "react-router-dom"
 import styles from './BlogDetails.module.css'
 
@@ -14,6 +14,7 @@ import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
 
 const BlogDetails = (props) => {
   const { id } = useParams()
+  const commentRef = useRef(null)
   const [blog, setBlog] = useState(null)
   const [pending, setPending] = useState(false)
 
@@ -49,6 +50,10 @@ const BlogDetails = (props) => {
     setPending(false)
   }
 
+  const handleScroll = () => {
+    commentRef.current.scrollIntoView()
+  }
+
   if (!blog) return <Loading />
 
   return (
@@ -63,6 +68,7 @@ const BlogDetails = (props) => {
               blog={blog}
               pending={pending}
               user={props.user}
+              handleScroll={handleScroll}
               handleAddLike={handleAddLike}
               handleRemoveLike={handleRemoveLike}
               handleDeleteBlog={props.handleDeleteBlog}
@@ -71,7 +77,7 @@ const BlogDetails = (props) => {
         </header>
         <p>{blog.text}</p>
       </article>
-      <section>
+      <section ref={commentRef}>
         <h1>Comments</h1>
         <NewComment handleAddComment={handleAddComment} />
         <Comments

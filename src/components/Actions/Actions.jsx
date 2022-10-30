@@ -6,7 +6,15 @@ import Icon from "../Icon/Icon"
 import heartAnim from "../../assets/animation/heart.json"
 
 const Actions = (props) => {
-  const { user, blog, pending, handleAddLike, handleRemoveLike, handleDeleteBlog } = props
+  const {
+    user,
+    blog,
+    pending,
+    handleScroll,
+    handleAddLike,
+    handleRemoveLike,
+    handleDeleteBlog
+  } = props
 
   const [direction, setDirection] = useState(1)
   const [play, setPlay] = useState(blog.likes.includes(user.profile))
@@ -29,7 +37,10 @@ const Actions = (props) => {
 
   const readerOptions = (
     <>
-      <button><Icon category={"Comments"} /></button>
+      <button onClick={handleScroll}>
+        <Icon category={"Comments"} />
+      </button>
+
       <button style={{ padding: "0px" }} onClick={handleClick} disabled={play || pending}>
         <Lottie
           speed={1}
