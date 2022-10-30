@@ -5,6 +5,8 @@ import Lottie from 'react-lottie-player'
 import Icon from "../Icon/Icon"
 import heartAnim from "../../assets/animation/heart.json"
 
+import Tooltip from "../Tooltip/Tooltip"
+
 const Actions = (props) => {
   const {
     user,
@@ -37,9 +39,11 @@ const Actions = (props) => {
 
   const readerOptions = (
     <>
-      <button onClick={handleScroll}>
-        <Icon category={"Comments"} />
-      </button>
+      <Tooltip text={"HI"}>
+        <button onClick={handleScroll}>
+          <Icon category={"Comments"} />
+        </button>
+      </Tooltip>
 
       <button style={{ padding: "0px" }} onClick={handleClick} disabled={play || pending}>
         <Lottie
