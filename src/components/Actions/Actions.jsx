@@ -39,11 +39,11 @@ const Actions = (props) => {
 
   const readerOptions = (
     <>
-      <Tooltip text={"HI"}>
-        <button onClick={handleScroll}>
-          <Icon category={"Comments"} />
-        </button>
-      </Tooltip>
+      {/* <Tooltip text={"HI"}> */}
+      <button onClick={handleScroll}>
+        <Icon category={"Comments"} />
+      </button>
+      {/* </Tooltip> */}
 
       <button style={{ padding: "0px" }} onClick={handleClick} disabled={play || pending}>
         <Lottie
