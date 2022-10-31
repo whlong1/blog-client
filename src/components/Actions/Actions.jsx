@@ -4,7 +4,6 @@ import Lottie from 'react-lottie-player'
 
 import Icon from "../Icon/Icon"
 import heartAnim from "../../assets/animation/heart.json"
-
 import TooltipButton from "../TooltipButton/TooltipButton"
 
 const Actions = (props) => {
@@ -18,7 +17,6 @@ const Actions = (props) => {
     handleDeleteBlog
   } = props
 
-  const [show, setShow] = useState(false)
   const [direction, setDirection] = useState(1)
   const [play, setPlay] = useState(blog.likes.includes(user.profile))
 
@@ -38,28 +36,11 @@ const Actions = (props) => {
     </>
   )
 
-  const style = {
-    zIndex: 1,
-    margin: '0',
-    width: '100%',
-    height: '100%',
-    display: 'flex',
-    position: 'absolute',
-    justifyContent: 'center',
-    visibility: show ? '' : 'hidden',
-  }
-
   const readerOptions = (
     <>
-      <button
-        onClick={handleScroll}
-        style={{ position: 'relative' }}
-        onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}
-      >
-        <span style={style}>5</span>
+      <TooltipButton onClick={handleScroll}>
         <Icon category={"Comments"} />
-      </button>
-
+      </TooltipButton>
       <button style={{ padding: "0px" }} onClick={handleClick} disabled={play || pending}>
         <Lottie
           speed={1}
