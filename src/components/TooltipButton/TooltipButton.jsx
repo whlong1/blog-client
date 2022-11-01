@@ -3,45 +3,41 @@ import { useState } from "react"
 const TooltipButton = ({ children, onClick }) => {
   const [show, setShow] = useState(true)
 
-  const hoverStyle = {
+  const containerStyle = {
     zIndex: 1,
+    display: 'flex',
+    margin: '0 0 52px',
     position: 'absolute',
+    flexDirection: 'column',
     visibility: show ? '' : 'hidden',
   }
-
+  
   const contentBoxStyle = {
+    margin: 0,
     width: '100%',
     height: '100%',
+    color: 'white',
     display: 'flex',
+    borderRadius: '5px',
     justifyContent: 'center',
-
-    background: 'black',
-    borderRadius: '5px'
+    padding: '4px',
+    fontSize: '12px',
+    background: 'rgba(0,0,0,0.15)',
   }
 
   const arrowStyle = {
-    // width: 0,
-    // height: 0,
-    // width: '100px',
     borderTop: '10px solid black',
     borderLeft: '8px solid transparent',
     borderRight: '8px solid transparent',
-
-    margin: '0 0 40px',
     borderRadius: '0px 2px',
 
     fill: '#0f0',
     stroke: '#0f0',
     strokeWidth: 10,
+    margin: 0,
+    zIndex: 1,
+    position: 'absolute',
   }
-  
-  const arrow = (
-    <svg
-      style={{ ...hoverStyle }}
-      width="30" height="40" viewBox="0 -50 300 300">
-      <polygon style={arrowStyle} strokeLinejoin="round" points="100 100, 150 150, 200 100, 100 100" />
-    </svg>
-  )
 
   return (
     <button
@@ -49,9 +45,9 @@ const TooltipButton = ({ children, onClick }) => {
       style={{ position: 'relative' }}
       onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}
     >
-      <span style={{ ...hoverStyle, ...contentBoxStyle }}>Content</span>
-      {arrow}
-      {/* <span style={{ ...hoverStyle, ...arrowStyle }}></span> */}
+      <span style={containerStyle}>
+        <span style={contentBoxStyle}>5</span>
+      </span>
       {children}
     </button>
   )
